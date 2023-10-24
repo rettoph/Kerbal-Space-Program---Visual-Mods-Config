@@ -6,13 +6,17 @@
     "author": [
         "Anthony"
     ],
-    "version": "2023.10.24.04.50.50",
+    "version": "2023.10.24.04.57.50",
     "ksp_version_min": "1.12.5",
     "ksp_version_max": "1.12.5",
     "license": [
         "unknown"
     ],
     "depends": [
+        {
+            "name": "BallisticFoxsNeutralTUFXProfile",
+            "version": "V1.3"
+        },
         {
             "name": "DistantObject",
             "version": "v2.1.1.14"
@@ -82,6 +86,6 @@
             "version": "0.2.3"
         }
     ],
-    "release_date": "2023-10-24T10:50:50.0389499-06:00",
+    "release_date": "2023-10-24T10:57:50.3520083-06:00",
     "kind": "metapackage"
 }
