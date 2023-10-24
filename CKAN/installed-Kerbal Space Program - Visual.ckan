@@ -6,7 +6,7 @@
     "author": [
         "Anthony"
     ],
-    "version": "2023.10.24.04.57.50",
+    "version": "2023.10.24.06.34.15",
     "ksp_version_min": "1.12.5",
     "ksp_version_max": "1.12.5",
     "license": [
@@ -66,12 +66,20 @@
             "version": "0.2.6.6"
         },
         {
+            "name": "PoodsCalmNebulaSkybox",
+            "version": "v1.3.0"
+        },
+        {
             "name": "ReStock",
             "version": "1.4.3"
         },
         {
             "name": "Shabby",
             "version": "0.3.0.0"
+        },
+        {
+            "name": "TextureReplacer",
+            "version": "v4.5.3"
         },
         {
             "name": "TUFX",
@@ -86,6 +94,6 @@
             "version": "0.2.3"
         }
     ],
-    "release_date": "2023-10-24T10:57:50.3520083-06:00",
+    "release_date": "2023-10-24T12:34:15.8316499-06:00",
     "kind": "metapackage"
 }
