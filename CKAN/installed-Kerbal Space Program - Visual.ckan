@@ -1,0 +1,87 @@
+{
+    "spec_version": "v1.18",
+    "identifier": "installed-Kerbal-Space-Program---Visual",
+    "name": "installed-Kerbal Space Program - Visual",
+    "abstract": "A list of modules installed on the Kerbal Space Program - Visual KSP instance",
+    "author": [
+        "Anthony"
+    ],
+    "version": "2023.10.24.04.50.50",
+    "ksp_version_min": "1.12.5",
+    "ksp_version_max": "1.12.5",
+    "license": [
+        "unknown"
+    ],
+    "depends": [
+        {
+            "name": "DistantObject",
+            "version": "v2.1.1.14"
+        },
+        {
+            "name": "DistantObject-default",
+            "version": "v2.1.1.14"
+        },
+        {
+            "name": "Harmony2",
+            "version": "2.2.1.0"
+        },
+        {
+            "name": "Kopernicus",
+            "version": "2:release-1.12.1-191"
+        },
+        {
+            "name": "LunaMultiplayer",
+            "version": "0.29.0"
+        },
+        {
+            "name": "ModularFlightIntegrator",
+            "version": "1.2.10.0"
+        },
+        {
+            "name": "ModuleManager",
+            "version": "4.2.3"
+        },
+        {
+            "name": "Parallax",
+            "version": "2.0.6"
+        },
+        {
+            "name": "Parallax-StockScatterTextures",
+            "version": "2.0.1"
+        },
+        {
+            "name": "Parallax-StockTextures",
+            "version": "2.0.0"
+        },
+        {
+            "name": "PlanetShine",
+            "version": "0.2.6.6"
+        },
+        {
+            "name": "PlanetShine-Config-Default",
+            "version": "0.2.6.6"
+        },
+        {
+            "name": "ReStock",
+            "version": "1.4.3"
+        },
+        {
+            "name": "Shabby",
+            "version": "0.3.0.0"
+        },
+        {
+            "name": "TUFX",
+            "version": "1.0.7.1"
+        },
+        {
+            "name": "Waterfall",
+            "version": "0.9.0"
+        },
+        {
+            "name": "WaterfallRestock",
+            "version": "0.2.3"
+        }
+    ],
+    "release_date": "2023-10-24T10:50:50.0389499-06:00",
+    "kind": "metapackage"
+}
