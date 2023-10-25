@@ -153,6 +153,9 @@
             "name": "TransferWindowPlannerFork",
             "version": "v1.9.1.0"
         },
+            "name": "TexturesUnlimited",
+            "version": "1.5.10.25"
+        },
         {
             "name": "TUFX",
             "version": "1.0.7.1"
