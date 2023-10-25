@@ -8,4 +8,5 @@ My preferred configuration for a collection of Visual specific mods. No Gameplay
 
 - Ensure all CKAN mods are installed
 - Install [True volumetric clouds release 3](https://www.patreon.com/posts/true-volumetric-87982960)
+- Install [Textures Unlimited Recolour Depot - Stock Recolour](https://forum.kerbalspaceprogram.com/topic/174188-112x-textures-unlimited-recolour-depot/)
 

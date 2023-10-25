@@ -6,7 +6,7 @@
     "author": [
         "Anthony"
     ],
-    "version": "2023.10.25.04.32.17",
+    "version": "2023.10.25.04.55.48",
     "ksp_version_min": "1.12.5",
     "ksp_version_max": "1.12.5",
     "license": [
@@ -90,6 +90,10 @@
             "version": "v4.5.3"
         },
         {
+            "name": "TexturesUnlimited",
+            "version": "1.5.10.25"
+        },
+        {
             "name": "TUFX",
             "version": "1.0.7.1"
         },
@@ -98,6 +102,6 @@
             "version": "0.9.0"
         }
     ],
-    "release_date": "2023-10-25T10:32:17.6083908-06:00",
+    "release_date": "2023-10-25T10:55:48.1119371-06:00",
     "kind": "metapackage"
 }
