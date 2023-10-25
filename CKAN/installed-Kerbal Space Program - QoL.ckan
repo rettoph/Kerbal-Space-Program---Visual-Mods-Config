@@ -6,7 +6,7 @@
     "author": [
         "Anthony"
     ],
-    "version": "2023.10.25.03.09.58",
+    "version": "2023.10.25.03.37.42",
     "ksp_version_min": "1.12.5",
     "ksp_version_max": "1.12.5",
     "license": [
@@ -24,6 +24,38 @@
         {
             "name": "ClickThroughBlocker",
             "version": "1:2.1.10.21"
+        },
+        {
+            "name": "ContractConfigurator",
+            "version": "v2.6.6.0"
+        },
+        {
+            "name": "ContractConfigurator-CleverSats",
+            "version": "1.4"
+        },
+        {
+            "name": "ContractConfigurator-ExplorationPlus",
+            "version": "2.0.1"
+        },
+        {
+            "name": "ContractConfigurator-FieldResearch",
+            "version": "1.2.2"
+        },
+        {
+            "name": "ContractConfigurator-KerbalAcademy",
+            "version": "1.1.10"
+        },
+        {
+            "name": "ContractConfigurator-KerbinSpaceStation",
+            "version": "2:3.7.3.1"
+        },
+        {
+            "name": "ContractConfigurator-Tourism",
+            "version": "1.5.2"
+        },
+        {
+            "name": "CrowdSourcedScience",
+            "version": "v6.0"
         },
         {
             "name": "DistantObject",
@@ -86,6 +118,10 @@
             "version": "v4.0.8"
         },
         {
+            "name": "ResearchAdvancementDivision",
+            "version": "1.2.1"
+        },
+        {
             "name": "Shabby",
             "version": "0.3.0.0"
         },
@@ -110,6 +146,10 @@
             "version": "1:0.1.9.11"
         },
         {
+            "name": "TourismExpanded",
+            "version": "1.0.2"
+        },
+        {
             "name": "TransferWindowPlannerFork",
             "version": "v1.9.1.0"
         },
@@ -126,6 +166,6 @@
             "version": "6.0.2"
         }
     ],
-    "release_date": "2023-10-24T21:09:58.0265196-06:00",
+    "release_date": "2023-10-24T21:37:42.1315186-06:00",
     "kind": "metapackage"
 }
