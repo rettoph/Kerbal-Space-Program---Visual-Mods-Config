@@ -1,12 +1,12 @@
 {
     "spec_version": "v1.18",
-    "identifier": "installed-Kerbal-Space-Program---Visual",
-    "name": "installed-Kerbal Space Program - Visual",
-    "abstract": "A list of modules installed on the Kerbal Space Program - Visual KSP instance",
+    "identifier": "installed-Kerbal-Space-Program---QoL",
+    "name": "installed-Kerbal Space Program - QoL",
+    "abstract": "A list of modules installed on the Kerbal Space Program - QoL KSP instance",
     "author": [
         "Anthony"
     ],
-    "version": "2023.10.25.02.02.48",
+    "version": "2023.10.25.03.09.58",
     "ksp_version_min": "1.12.5",
     "ksp_version_max": "1.12.5",
     "license": [
@@ -20,6 +20,10 @@
         {
             "name": "BallisticFoxsNeutralTUFXProfile",
             "version": "V1.3"
+        },
+        {
+            "name": "ClickThroughBlocker",
+            "version": "1:2.1.10.21"
         },
         {
             "name": "DistantObject",
@@ -38,8 +42,8 @@
             "version": "2:release-1.12.1-191"
         },
         {
-            "name": "LunaMultiplayer",
-            "version": "0.29.0"
+            "name": "LessGrindyScience",
+            "version": "1:1.0.0.1"
         },
         {
             "name": "ModularFlightIntegrator",
@@ -90,8 +94,24 @@
             "version": "2.8.14.0"
         },
         {
+            "name": "SpaceTuxLibrary",
+            "version": "0.0.8.5"
+        },
+        {
+            "name": "StageRecovery",
+            "version": "1.9.6.3"
+        },
+        {
             "name": "TextureReplacer",
             "version": "v4.5.3"
+        },
+        {
+            "name": "ToolbarController",
+            "version": "1:0.1.9.11"
+        },
+        {
+            "name": "TransferWindowPlannerFork",
+            "version": "v1.9.1.0"
         },
         {
             "name": "TUFX",
@@ -100,8 +120,12 @@
         {
             "name": "Waterfall",
             "version": "0.9.0"
+        },
+        {
+            "name": "xScienceContinued",
+            "version": "6.0.2"
         }
     ],
-    "release_date": "2023-10-24T20:02:48.6704589-06:00",
+    "release_date": "2023-10-24T21:09:58.0265196-06:00",
     "kind": "metapackage"
 }
