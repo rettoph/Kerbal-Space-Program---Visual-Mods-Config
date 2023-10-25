@@ -1,4 +1,4 @@
-# KerbalSpaceProgram VisualModsConfig
+# Kerbal Space Program Visual Mods Config
 KSP v1.12.5
 
 My configurations for my preferred Visual Mods
