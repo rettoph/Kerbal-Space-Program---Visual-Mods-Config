@@ -1,4 +1,4 @@
-# Kerbal Space Program - Base Mods Config
+# Kerbal Space Program - Visual Config
 KSP v1.12.5
 
 My preferred configuration for a collection of Visual specific mods. No Gameplay changes within this branch.
