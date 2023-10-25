@@ -1,7 +1,7 @@
-# Kerbal Space Program - Visual Mods Config
+# Kerbal Space Program - Base Mods Config
 KSP v1.12.5
 
-My configurations for my preferred Visual Mods
+My preferred configuration for a collection of Visual specific mods. No Gameplay changes within this branch.
 
 ## Installation 
 :warning: **For Manual Mod Installation**: Make sure not to override any *.cfg files when copying files over
