@@ -1,0 +1,6 @@
+*
+!.gitignore
+!*/
+!*/**/*.cfg
+!CKAN/*.ckan
+!GameData\SRB-Plumes\README.MD
