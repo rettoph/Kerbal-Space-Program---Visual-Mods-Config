@@ -891,6 +891,11 @@ GAME
 		{
 		}
 	}
+	SCENARIO
+	{
+		name = ScenarioDiscoverableObjects
+		scene = 7, 8, 5
+	}
 	FLIGHTSTATE
 	{
 		version = 1.12.5
@@ -1937,10 +1942,6 @@ GAME
 				flight = 0
 			}
 		}
-	}
-	MESSAGESYSTEM
-	{
-		flash = False
 	}
 	VMSNode
 	{
