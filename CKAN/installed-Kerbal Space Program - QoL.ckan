@@ -6,7 +6,7 @@
     "author": [
         "Anthony"
     ],
-    "version": "2023.10.26.02.33.30",
+    "version": "2023.10.26.04.09.54",
     "ksp_version_min": "1.12.5",
     "ksp_version_max": "1.12.5",
     "license": [
@@ -40,10 +40,6 @@
         {
             "name": "ContractConfigurator-FieldResearch",
             "version": "1.2.2"
-        },
-        {
-            "name": "ContractConfigurator-KerbalAcademy",
-            "version": "1.1.10"
         },
         {
             "name": "ContractConfigurator-KerbinSpaceStation",
@@ -170,6 +166,6 @@
             "version": "6.0.2"
         }
     ],
-    "release_date": "2023-10-25T20:33:30.5514476-06:00",
+    "release_date": "2023-10-26T10:09:54.8385656-06:00",
     "kind": "metapackage"
 }
