@@ -1,7 +1,7 @@
-# Kerbal Space Program - Visual + QoL Config
+# Kerbal Space Program - Config
 KSP v1.12.5
 
-My preferred configuration for a collection of Visual and QoL mods. No Gameplay changes within this branch.
+My preferred configuration for a collection of Visual and QoL mods. No Gameplay changes.
 
 ## Installation 
 :warning: **For Manual Mod Installation**: Make sure not to override any *.cfg files when copying files over
