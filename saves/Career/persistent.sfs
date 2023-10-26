@@ -12,7 +12,7 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Flags/default
-	launchID = 12
+	launchID = 18
 	defaultVABLaunchSite = LaunchPad
 	defaultSPHLaunchSite = Runway
 	modded = True
@@ -109,7 +109,7 @@ GAME
 		TUFXGameSettings
 		{
 			WarningLabel = 
-			FlightSceneProfile = FoxWarmHDR
+			FlightSceneProfile = FoxWarm
 			IVAProfile = FoxWarmHDR
 			MapSceneProfile = FoxWarmHDR
 			EditorSceneProfile = Default-Editor
@@ -344,15 +344,7 @@ GAME
 	{
 		name = Funding
 		scene = 7, 8, 5, 6
-		funds = 88737.130434989929
-	}
-	SCENARIO
-	{
-		name = ScenarioNewGameIntro
-		scene = 5, 6, 8
-		kscComplete = True
-		editorComplete = True
-		tsComplete = False
+		funds = 42119.268420696259
 	}
 	SCENARIO
 	{
@@ -379,18 +371,18 @@ GAME
 			}
 			RecordsDepth
 			{
-				reached = 583.55206115716862
-				record = 1.324561859946698
+				reached = 5243.8269253520493
+				record = 1.6424630025867373
 			}
 			RecordsSpeed
 			{
-				reached = 2236.2030133043168
-				record = 938.16452422137252
+				reached = 2905.7482379130893
+				record = 2411.9972022266456
 			}
 			RecordsDistance
 			{
-				reached = 2486.1464801009688
-				record = 7317.066421141225
+				completed = 2897.1682379130971
+				record = 100000
 			}
 			ReachedSpace
 			{
@@ -408,6 +400,19 @@ GAME
 			Kerbin
 			{
 				reached = 221.50000000003951
+				Orbit
+				{
+					completed = 2897.1482379130971
+					vessel
+					{
+						name = Untitled Space Craft
+						flag = Squad/Flags/default
+					}
+					crew
+					{
+						crews = Jebediah Kerman
+					}
+				}
 				Landing
 				{
 					completed = 485.8503240966532
@@ -446,6 +451,19 @@ GAME
 						crews = Jebediah Kerman
 					}
 				}
+				ReturnFromOrbit
+				{
+					completed = 5242.2269253520508
+					vessel
+					{
+						name = Untitled Space Craft
+						flag = Squad/Flags/default
+					}
+					crew
+					{
+						crews = Jebediah Kerman
+					}
+				}
 			}
 		}
 	}
@@ -453,7 +471,7 @@ GAME
 	{
 		name = ResearchAndDevelopment
 		scene = 7, 8, 5, 6
-		sci = 83.9375534
+		sci = 6.63756657
 		Tech
 		{
 			id = start
@@ -476,6 +494,7 @@ GAME
 			cost = 5
 			part = sensorThermometer
 			part = Decoupler.1
+			part = longAntenna
 		}
 		Tech
 		{
@@ -492,6 +511,8 @@ GAME
 			cost = 15
 			part = sensorBarometer
 			part = miniLandingLeg
+			part = radialDrogue
+			part = parachuteRadial
 		}
 		Tech
 		{
@@ -502,6 +523,37 @@ GAME
 			part = liquidEngine.v2
 			part = solidBooster1-1
 			part = fuelTankSmall
+		}
+		Tech
+		{
+			id = advRocketry
+			state = Available
+			cost = 45
+			part = liquidEngine3.v2
+			part = fuelTank
+		}
+		Tech
+		{
+			id = basicScience
+			state = Available
+			cost = 45
+			part = science.module
+		}
+		Tech
+		{
+			id = flightControl
+			state = Available
+			cost = 45
+			part = R8winglet
+			part = winglet3
+			part = sasModule
+		}
+		Tech
+		{
+			id = stability
+			state = Available
+			cost = 18
+			part = radialDecoupler
 		}
 		Science
 		{
@@ -541,9 +593,9 @@ GAME
 			id = mysteryGoo@KerbinFlyingLow
 			title = Mystery Goo™ Observation while flying at Kerbin
 			dsc = 1
-			scv = 0.000654472155
+			scv = 0.000151015905
 			sbv = 0.699999988
-			sci = 9.09404373
+			sci = 9.09862518
 			asc = True
 			cap = 9.09999943
 		}
@@ -552,9 +604,9 @@ GAME
 			id = mysteryGoo@KerbinSrfSplashedWater
 			title = Mystery Goo™ Observation from Kerbin's Water
 			dsc = 1
-			scv = 0.0122894682
+			scv = 0.00283598877
 			sbv = 0.400000006
-			sci = 5.13609505
+			sci = 5.18525314
 			asc = True
 			cap = 5.20000029
 		}
@@ -1025,9 +1077,9 @@ GAME
 			id = mysteryGoo@KerbinSrfLandedR&D
 			title = Mystery Goo™ Observation from R&D
 			dsc = 1
-			scv = 0.0122894989
+			scv = 0.0028360195
 			sbv = 0.300000012
-			sci = 3.85207105
+			sci = 3.88893962
 			asc = True
 			cap = 3.9000001
 		}
@@ -1080,9 +1132,9 @@ GAME
 			id = mysteryGoo@KerbinFlyingHigh
 			title = Mystery Goo™ Observation from Kerbin's upper atmosphere
 			dsc = 1
-			scv = 0.230769217
+			scv = 0.00283599924
 			sbv = 0.899999976
-			sci = 9
+			sci = 11.6668186
 			asc = True
 			cap = 11.6999998
 		}
@@ -1124,9 +1176,9 @@ GAME
 			id = mysteryGoo@KerbinInSpaceLow
 			title = Mystery Goo™ Observation while in space near Kerbin
 			dsc = 1
-			scv = 0.230769232
+			scv = 0.0532544218
 			sbv = 1
-			sci = 10
+			sci = 12.3076925
 			asc = True
 			cap = 13
 		}
@@ -1155,13 +1207,178 @@ GAME
 		Science
 		{
 			id = recovery@KerbinSubOrbited
-			title = Recovery of a vessel after a sub-orbital flight.
+			title = Recovery of a vessel returned from a sub-orbital flight on Kerbin
 			dsc = 1
-			scv = 0.166666701
+			scv = 0.02777775
 			sbv = 8
-			sci = 8
+			sci = 9.33333397
 			asc = True
 			cap = 9.60000038
+		}
+		Science
+		{
+			id = recovery@KerbinOrbited
+			title = Recovery of a vessel returned from orbit around Kerbin
+			dsc = 1
+			scv = 0.166666672
+			sbv = 10
+			sci = 10
+			asc = True
+			cap = 12
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinFlyingLow
+			title = Materials Study while flying at Kerbin
+			dsc = 1
+			scv = 0.0478515476
+			sbv = 0.699999988
+			sci = 21.328125
+			asc = True
+			cap = 22.3999996
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinFlyingHigh
+			title = Materials Study from Kerbin's upper atmosphere
+			dsc = 1
+			scv = 0.0478515364
+			sbv = 0.899999976
+			sci = 27.421875
+			asc = True
+			cap = 28.7999992
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinInSpaceLow
+			title = Materials Study while in space near Kerbin
+			dsc = 1
+			scv = 0.21875
+			sbv = 1
+			sci = 25
+			asc = True
+			cap = 32
+		}
+		Science
+		{
+			id = crewReport@KerbinInSpaceLow
+			title = Crew Report while in space near Kerbin
+			dsc = 1
+			scv = 0
+			sbv = 1
+			sci = 5
+			asc = True
+			cap = 5
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinSrfLandedLaunchPad
+			title = Materials Study from LaunchPad
+			dsc = 1
+			scv = 0.218749985
+			sbv = 0.300000012
+			sci = 7.50000048
+			asc = True
+			cap = 9.60000038
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinSrfSplashedWater
+			title = Materials Study from Kerbin's Water
+			dsc = 1
+			scv = 0.218750015
+			sbv = 0.400000006
+			sci = 10
+			asc = True
+			cap = 12.8000002
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinSrfLandedCrawlerway
+			title = Materials Study from Crawlerway
+			dsc = 1
+			scv = 1
+			sbv = 0.300000012
+			sci = 0
+			asc = True
+			cap = 9.60000038
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinSrfLandedR&D
+			title = Materials Study from R&D
+			dsc = 1
+			scv = 0.218749985
+			sbv = 0.300000012
+			sci = 7.50000048
+			asc = True
+			cap = 9.60000038
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinSrfLandedAdministration
+			title = Materials Study from Administration
+			dsc = 1
+			scv = 0.0104675684
+			sbv = 0.300000012
+			sci = 9.49951172
+			asc = True
+			cap = 9.60000038
+		}
+		Science
+		{
+			id = mysteryGoo@KerbinSrfLandedAdministration
+			title = Mystery Goo™ Observation from Administration
+			dsc = 1
+			scv = 0.0122894989
+			sbv = 0.300000012
+			sci = 3.85207105
+			asc = True
+			cap = 3.9000001
+		}
+		Science
+		{
+			id = temperatureScan@KerbinSrfLandedAdministration
+			title = Temperature Scan from Administration
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			asc = True
+			cap = 2.4000001
+		}
+		Science
+		{
+			id = barometerScan@KerbinSrfLandedAdministration
+			title = Atmospheric Pressure Scan from Administration
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 3.60000014
+			asc = True
+			cap = 3.60000014
+		}
+		Science
+		{
+			id = crewReport@KerbinSrfLandedAdministration
+			title = Crew Report from Administration
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 1.5
+			asc = True
+			cap = 1.5
+		}
+		Science
+		{
+			id = evaReport@KerbinSrfLandedAdministration
+			title = EVA Report from Administration
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			asc = True
+			cap = 2.4000001
 		}
 	}
 	SCENARIO
@@ -1173,7 +1390,7 @@ GAME
 	{
 		name = Reputation
 		scene = 7, 8, 5, 6
-		rep = 44.9999466
+		rep = 60.9998055
 	}
 	SCENARIO
 	{
@@ -1390,6 +1607,18 @@ GAME
 		{
 			intact = True
 		}
+		SpaceCenter/LaunchPad/Facility/building
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/SmallTanks
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/BigTanks
+		{
+			intact = True
+		}
 	}
 	SCENARIO
 	{
@@ -1397,7 +1626,7 @@ GAME
 		scene = 5, 6, 7, 8
 		SpaceCenter/LaunchPad
 		{
-			lvl = 0
+			lvl = 0.5
 		}
 		SpaceCenter/Runway
 		{
@@ -1454,7 +1683,7 @@ GAME
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6
-		update = 2541.0882379134209
+		update = -1000
 		version = 1.12.5
 		WEIGHTS
 		{
@@ -1489,7 +1718,7 @@ GAME
 			Moho = 30
 			Minmus = 30
 			Mun = 30
-			Kerbin = 53
+			Kerbin = 89
 			Sun = 30
 		}
 		CONTRACTS
@@ -1856,6 +2085,56 @@ GAME
 			}
 			CONTRACT
 			{
+				guid = 2366d15e-9189-499b-bb9a-eeeacfa6129b
+				type = PartTest
+				prestige = 0
+				seed = 902810618
+				state = Offered
+				viewed = Read
+				agent = O.M.B. Demolition Enterprises
+				agentName = O.M.B. Demolition Enterprises
+				deadlineType = Floating
+				expiryType = Floating
+				values = 21600,9201600,2160,5669.99974250793,5669.99974250793,1,3.809524,3,23944.2939117417,0,0,0
+				part = Decoupler.2
+				haul = False
+				dest = 1
+				sit = SPLASHED
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					state = Incomplete
+					values = 0,0,0,0,0
+					part = Decoupler.2
+					body = Kerbin
+					situation = SPLASHED
+					uniqueID = 0.93651340666064753
+					haul = False
+					repeatability = BODYANDSITUATION
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					PARAM
+					{
+						name = ReachDestination
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = SPLASHED
+						title = 
+					}
+				}
+			}
+			CONTRACT
+			{
 				guid = 6060f4c3-613e-4b30-a470-ff69f0b57aca
 				type = PartTest
 				prestige = 1
@@ -1919,6 +2198,64 @@ GAME
 					values = 0,0,0,0,0
 					minSpd = 1800
 					maxSpd = 2110
+				}
+			}
+			CONTRACT
+			{
+				guid = c65d1e70-9a91-40c7-8052-3afe4b86adcc
+				type = PartTest
+				prestige = 1
+				seed = 902345777
+				state = Offered
+				viewed = Seen
+				agent = Jebediah Kerman's Junkyard and Spacecraft Parts Co
+				agentName = Jebediah Kerman's Junkyard and Spacecraft Parts Co
+				deadlineType = Floating
+				expiryType = Floating
+				values = 38571.4282035828,8215714.20736313,5818.96501779556,16002.1541457751,18562.5004023314,2,12.49231,8.653847,40915.5621153245,0,0,0
+				part = liquidEngine3.v2
+				haul = True
+				dest = 1
+				sit = ORBITING
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					state = Incomplete
+					values = 0,0,0,0,0
+					part = liquidEngine3.v2
+					body = Kerbin
+					situation = ORBITING
+					uniqueID = 0.87361391208768602
+					haul = True
+					repeatability = BODYANDSITUATION
+				}
+				PARAM
+				{
+					name = ReachDestination
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					dest = 1
+					title = 
+				}
+				PARAM
+				{
+					name = ReachSituation
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					sit = ORBITING
+					title = 
+				}
+				PARAM
+				{
+					name = ReachAltitudeEnvelope
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					minAlt = 80000
+					maxAlt = 90000
 				}
 			}
 			CONTRACT
@@ -2054,114 +2391,6 @@ GAME
 						values = 0,0,0,0,0
 						minSpd = 140
 						maxSpd = 240
-					}
-				}
-			}
-			CONTRACT
-			{
-				guid = c65d1e70-9a91-40c7-8052-3afe4b86adcc
-				type = PartTest
-				prestige = 1
-				seed = 902345777
-				state = Offered
-				viewed = Unseen
-				agent = Jebediah Kerman's Junkyard and Spacecraft Parts Co
-				agentName = Jebediah Kerman's Junkyard and Spacecraft Parts Co
-				deadlineType = Floating
-				expiryType = Floating
-				values = 38571.4282035828,8215714.20736313,5818.96501779556,16002.1541457751,18562.5004023314,2,12.49231,8.653847,40915.5621153245,0,0,0
-				part = liquidEngine3.v2
-				haul = True
-				dest = 1
-				sit = ORBITING
-				exp = True
-				PARAM
-				{
-					name = PartTest
-					state = Incomplete
-					values = 0,0,0,0,0
-					part = liquidEngine3.v2
-					body = Kerbin
-					situation = ORBITING
-					uniqueID = 0.87361391208768602
-					haul = True
-					repeatability = BODYANDSITUATION
-				}
-				PARAM
-				{
-					name = ReachDestination
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					dest = 1
-					title = 
-				}
-				PARAM
-				{
-					name = ReachSituation
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					sit = ORBITING
-					title = 
-				}
-				PARAM
-				{
-					name = ReachAltitudeEnvelope
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					minAlt = 80000
-					maxAlt = 90000
-				}
-			}
-			CONTRACT
-			{
-				guid = 2366d15e-9189-499b-bb9a-eeeacfa6129b
-				type = PartTest
-				prestige = 0
-				seed = 902810618
-				state = Offered
-				viewed = Unseen
-				agent = O.M.B. Demolition Enterprises
-				agentName = O.M.B. Demolition Enterprises
-				deadlineType = Floating
-				expiryType = Floating
-				values = 21600,9201600,2160,5669.99974250793,5669.99974250793,1,3.809524,3,23944.2939117417,0,0,0
-				part = Decoupler.2
-				haul = False
-				dest = 1
-				sit = SPLASHED
-				exp = True
-				PARAM
-				{
-					name = PartTest
-					state = Incomplete
-					values = 0,0,0,0,0
-					part = Decoupler.2
-					body = Kerbin
-					situation = SPLASHED
-					uniqueID = 0.93651340666064753
-					haul = False
-					repeatability = BODYANDSITUATION
-					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
-					PARAM
-					{
-						name = ReachDestination
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						dest = 1
-						title = 
-					}
-					PARAM
-					{
-						name = ReachSituation
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						sit = SPLASHED
-						title = 
 					}
 				}
 			}
@@ -2348,13 +2577,325 @@ GAME
 					}
 				}
 			}
+			CONTRACT_FINISHED
+			{
+				guid = 5822c6ec-3878-4157-af34-966a92a50f79
+				type = ConfiguredContract
+				prestige = 0
+				seed = 119354227
+				state = Completed
+				viewed = Read
+				agent = Field Research Team
+				agentName = Field Research Team
+				deadlineType = None
+				expiryType = Floating
+				ignoresWeight = True
+				values = 1084440,0,0,4967,0,0,0,0,1087375.06823791,5354.34692535417,0,19405.4751638911
+				subtype = FS_Scraps
+				title = Perform another Mystery Goo™ Observation while in space near Kerbin
+				description = We've got some good mystery goo™ observation data while in space near Kerbin, but Wernher believes that we can learn more.  Re-run the experiment and get the data back home.
+				synopsis = Collect science about Mystery Goo™ Observation while in space near Kerbin.
+				completedMessage = Great, let's hope that completes our knowledge of the topic.
+				hash = 1061140015
+				targetBody = Kerbin
+				UNIQUE_DATA
+				{
+					scienceSubject = ScienceSubject:mysteryGoo@KerbinInSpaceLow
+				}
+				PARAM
+				{
+					name = CollectScienceCustom
+					id = CollectScience
+					enabled = False
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = FieldResearch.FS_Scraps
+					title = 
+					notes = 
+					completedMessage = 
+					targetBody = Kerbin
+					situation = InSpaceLow
+					experiment = mysteryGoo
+					recovery = mysteryGoo
+					recoveryMethod = Ideal
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = destination
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = FieldResearch.FS_Scraps
+						title = Destination: Kerbin
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = situation
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = FieldResearch.FS_Scraps
+						title = Situation: Low in space
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = experiment
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = FieldResearch.FS_Scraps
+						title = Experiment: Mystery Goo™ Observation
+						notes = 
+						completedMessage = 
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = mysteryGooSubject
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = FieldResearch.FS_Scraps
+							title = 
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = recovery
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = FieldResearch.FS_Scraps
+							title = Recovery: Recover
+							notes = 
+							completedMessage = 
+						}
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 2cfee8fb-04ee-4bc5-a34b-6a667d9d937e
+				type = ConfiguredContract
+				prestige = 0
+				seed = 1507550421
+				state = Completed
+				viewed = Read
+				agent = Field Research Team
+				agentName = Field Research Team
+				deadlineType = None
+				expiryType = Floating
+				ignoresWeight = True
+				values = 752040,0,0,5468,0,0,0,0,757374.086925354,20074.1525369525,0,20779.1096463427
+				subtype = FS_Scraps
+				title = Perform another Mystery Goo™ Observation from Kerbin's upper atmosphere
+				description = We've got some good mystery goo™ observation data from Kerbin's upper atmosphere, but Wernher believes that we can learn more.  Re-run the experiment and get the data back home.
+				synopsis = Collect science about Mystery Goo™ Observation from Kerbin's upper atmosphere.
+				completedMessage = Great, let's hope that completes our knowledge of the topic.
+				hash = 1061140015
+				targetBody = Kerbin
+				UNIQUE_DATA
+				{
+					scienceSubject = ScienceSubject:mysteryGoo@KerbinFlyingHigh
+				}
+				PARAM
+				{
+					name = CollectScienceCustom
+					id = CollectScience
+					enabled = False
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = FieldResearch.FS_Scraps
+					title = 
+					notes = 
+					completedMessage = 
+					targetBody = Kerbin
+					situation = FlyingHigh
+					experiment = mysteryGoo
+					recovery = mysteryGoo
+					recoveryMethod = Ideal
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = destination
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = FieldResearch.FS_Scraps
+						title = Destination: Kerbin
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = situation
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = FieldResearch.FS_Scraps
+						title = Situation: Flying high
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = experiment
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = FieldResearch.FS_Scraps
+						title = Experiment: Mystery Goo™ Observation
+						notes = 
+						completedMessage = 
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = mysteryGooSubject
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = FieldResearch.FS_Scraps
+							title = 
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = recovery
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = FieldResearch.FS_Scraps
+							title = Recovery: Recover
+							notes = 
+							completedMessage = 
+						}
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 6005a926-25b7-4ed8-8343-1628aa05f7f2
+				type = ConfiguredContract
+				prestige = 0
+				seed = 972207247
+				state = Completed
+				viewed = Read
+				agent = Field Research Team
+				agentName = Field Research Team
+				deadlineType = None
+				expiryType = Floating
+				ignoresWeight = True
+				values = 1263840,0,0,5049,0,0,0,0,1283742.69253695,20074.1525369525,0,20779.1096463427
+				subtype = FS_Scraps
+				title = Perform another Materials Study from Kerbin's upper atmosphere
+				description = We've got some good materials study data from Kerbin's upper atmosphere, but Wernher believes that we can learn more.  Re-run the experiment and get the data back home.
+				synopsis = Collect science about Materials Study from Kerbin's upper atmosphere.
+				completedMessage = Great, let's hope that completes our knowledge of the topic.
+				hash = 1061140015
+				targetBody = Kerbin
+				UNIQUE_DATA
+				{
+					scienceSubject = ScienceSubject:mobileMaterialsLab@KerbinFlyingHigh
+				}
+				PARAM
+				{
+					name = CollectScienceCustom
+					id = CollectScience
+					enabled = False
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = FieldResearch.FS_Scraps
+					title = 
+					notes = 
+					completedMessage = 
+					targetBody = Kerbin
+					situation = FlyingHigh
+					experiment = mobileMaterialsLab
+					recovery = mobileMaterialsLab
+					recoveryMethod = Ideal
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = destination
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = FieldResearch.FS_Scraps
+						title = Destination: Kerbin
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = situation
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = FieldResearch.FS_Scraps
+						title = Situation: Flying high
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = experiment
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = FieldResearch.FS_Scraps
+						title = Experiment: Materials Study
+						notes = 
+						completedMessage = 
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = mobileMaterialsLabSubject
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = FieldResearch.FS_Scraps
+							title = 
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = recovery
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = FieldResearch.FS_Scraps
+							title = Recovery: Recover
+							notes = 
+							completedMessage = 
+						}
+					}
+				}
+			}
 		}
 	}
 	SCENARIO
 	{
 		name = SentinelScenario
 		scene = 7, 8, 5
-		NextSpawnTime = 12256.624743309601
+		NextSpawnTime = 39596.641599698371
 	}
 	SCENARIO
 	{
@@ -2495,73 +3036,10 @@ GAME
 		scene = 7, 8, 5
 		CONTRACT
 		{
-			guid = 9cf8c758-ca75-4268-865a-86aa4dc8b7d7
+			guid = bcc3b868-a7cc-4168-8bd4-949ebe8247d0
 			type = ConfiguredContract
-			prestige = 2
-			seed = 204864637
-			state = Offered
-			viewed = Unseen
-			agent = Exploration
-			agentName = Exploration
-			deadlineType = None
-			expiryType = Floating
-			ignoresWeight = True
-			values = 96720,0,0,26400,0,2,9,0,96721.26,0,0,0
-			subtype = ExplorationPlus-Orbit
-			title = Orbit Kerbin
-			description = Here at KSC we like to think we are always open to exploring new frontiers. With this in mind, we want you to head out to Kerbin and see what we can see.
-			synopsis = Reach orbit of Kerbin
-			completedMessage = Huzzah! There is no such thing as the final frontier.
-			hash = 2045345754
-			targetBody = Kerbin
-			UNIQUE_DATA
-			{
-				targetBody1 = CelestialBody:Kerbin
-			}
-			PARAM
-			{
-				name = ReachState
-				id = ReachState
-				state = Incomplete
-				disableOnStateChange = False
-				values = 0,0,0,0,0
-				ContractIdentifier = ExplorationPlus.ExplorationPlus-Orbit
-				title = Orbit Kerbin
-				notes = 
-				completedMessage = 
-				allowStateReset = False
-				targetBody = Kerbin
-				situation = ORBITING
-				PARAM
-				{
-					name = ParameterDelegate`1
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ExplorationPlus.ExplorationPlus-Orbit
-					title = Destination: Kerbin
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ExplorationPlus.ExplorationPlus-Orbit
-					title = Situation: Orbit
-					notes = 
-					completedMessage = 
-				}
-			}
-		}
-		CONTRACT
-		{
-			guid = 674f94fc-089e-404e-88f3-43209adf34da
-			type = ConfiguredContract
-			prestige = 0
-			seed = 894633263
+			prestige = 1
+			seed = 1507190804
 			state = Offered
 			viewed = Unseen
 			agent = Field Research Team
@@ -2569,13 +3047,325 @@ GAME
 			deadlineType = None
 			expiryType = Floating
 			ignoresWeight = True
-			values = 2049180,0,0,12000,0,0,2,0,2049532.50093689,0,0,0
-			subtype = FS_KSC
-			title = Perform experiments around KSC
-			description = There are lots of opportunities to do science around the Kerbal Space Center.  Wernher needs us to run a few tests at different locations as a control test of our experiments.
-			synopsis = Run the required tests around the Kerbal Space Center and recover the data.
-			completedMessage = Everything is looking good with these experiments, time to get them into space!
-			hash = 374140258
+			values = 385560,0,0,18301,0,0,10,0,388102.448237913,0,0,0
+			subtype = FS_HardScience
+			title = Gather rare science results from Kerbin’s Badlands
+			description = They say that it's difficult to find water at Kerbin’s Badlands.  We've mapped out a few locations where there might be some.  Find a suitable spot and run some experiments.
+			synopsis = Run the requested experiments while splashed down at Kerbin’s Badlands.
+			completedMessage = This is some great data that we've accumulated!
+			hash = -261172271
+			targetBody = Kerbin
+			BEHAVIOUR
+			{
+				type = ContractConfigurator.Behaviour.WaypointGenerator
+				WAYPOINT
+				{
+					type = WAYPOINT
+					names = Suggested Badlands Splashdown
+					celestialName = Kerbin
+					name = Suggested Badlands Splashdown
+					icon = ContractPacks/FieldResearch/Icons/research
+					latitude = -3.8232421874999996
+					longitude = 69.3896484375
+					altitude = 0
+					index = 0
+					hidden = False
+					clustered = False
+					randomAltitude = False
+					underwater = False
+				}
+				WAYPOINT
+				{
+					type = WAYPOINT
+					names = Suggested Badlands Splashdown
+					celestialName = Kerbin
+					name = Suggested Badlands Splashdown
+					icon = ContractPacks/FieldResearch/Icons/research
+					latitude = -17.9736328125
+					longitude = 23.0712890625
+					altitude = 0
+					index = 1
+					hidden = False
+					clustered = False
+					randomAltitude = False
+					underwater = False
+				}
+				WAYPOINT
+				{
+					type = WAYPOINT
+					names = Suggested Badlands Splashdown
+					celestialName = Kerbin
+					name = Suggested Badlands Splashdown
+					icon = ContractPacks/FieldResearch/Icons/research
+					latitude = 0
+					longitude = 0
+					altitude = 0
+					index = 2
+					hidden = True
+					clustered = False
+					randomAltitude = False
+					underwater = False
+				}
+			}
+			PARAM
+			{
+				name = CollectScienceCustom
+				id = CollectScience
+				state = Incomplete
+				disableOnStateChange = False
+				values = 0,0,0,0,0
+				ContractIdentifier = FieldResearch.FS_HardScience
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = False
+				targetBody = Kerbin
+				biome = Badlands
+				situation = SrfSplashed
+				experiment = evaReport
+				experiment = mysteryGoo
+				experiment = temperatureScan
+				recoveryMethod = None
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = biome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = FieldResearch.FS_HardScience
+					title = Biome: Kerbin’s Badlands
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = situation
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = FieldResearch.FS_HardScience
+					title = Situation: Splashed down
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = FieldResearch.FS_HardScience
+					title = Experiment: EVA Report
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = evaReportSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = FieldResearch.FS_HardScience
+						title = 
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = FieldResearch.FS_HardScience
+					title = Experiment: Mystery Goo™ Observation
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = mysteryGooSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = FieldResearch.FS_HardScience
+						title = 
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = FieldResearch.FS_HardScience
+					title = Experiment: Temperature Scan
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = temperatureScanSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = FieldResearch.FS_HardScience
+						title = 
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = 32566351-1bbd-4834-98f9-f5acc02097fd
+			type = ConfiguredContract
+			prestige = 2
+			seed = 1965508396
+			state = Offered
+			viewed = Unseen
+			agent = Exploration
+			agentName = Exploration
+			deadlineType = None
+			expiryType = Floating
+			ignoresWeight = True
+			values = 127260,0,0,52800,0,4,18,0,130194.848237913,0,0,0
+			subtype = ExplorationPlus-FlyBy
+			title = Start exploring The Mun
+			description = Here at KSC we like to think we are always open to exploring new frontiers. With this in mind, we want you to head out to The Mun and see what we can see.
+			synopsis = Begin exploring The Mun
+			completedMessage = Huzzah! There is no such thing as the final frontier.
+			hash = 455316109
+			targetBody = Mun
+			PARAM
+			{
+				name = ReachState
+				id = ReachState
+				state = Incomplete
+				disableOnStateChange = False
+				values = 0,0,0,0,0
+				ContractIdentifier = ExplorationPlus.ExplorationPlus-FlyBy
+				title = Fly by The Mun
+				notes = 
+				completedMessage = 
+				allowStateReset = False
+				targetBody = Mun
+				situation = ESCAPING
+				PARAM
+				{
+					name = ParameterDelegate`1
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = ExplorationPlus.ExplorationPlus-FlyBy
+					title = Destination: The Mun
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = ExplorationPlus.ExplorationPlus-FlyBy
+					title = Situation: Escape trajectory
+					notes = 
+					completedMessage = 
+				}
+			}
+			PARAM
+			{
+				name = CollectScienceCustom
+				id = CollectScience
+				state = Incomplete
+				disableOnStateChange = False
+				values = 0,0,0,0,0
+				ContractIdentifier = ExplorationPlus.ExplorationPlus-FlyBy
+				title = Return the first science from The Mun
+				notes = 
+				completedMessage = 
+				allowStateReset = False
+				targetBody = Mun
+				recoveryMethod = RecoverOrTransmit
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = destination
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = ExplorationPlus.ExplorationPlus-FlyBy
+					title = Destination: The Mun
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = ExplorationPlus.ExplorationPlus-FlyBy
+					title = Experiment: Any
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Subject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = ExplorationPlus.ExplorationPlus-FlyBy
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = ExplorationPlus.ExplorationPlus-FlyBy
+						title = Recovery: Recover or transmit
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = 2d6fae09-5bf2-485a-adaa-5dfcde8d6e32
+			type = ConfiguredContract
+			prestige = 0
+			seed = 52176341
+			state = Offered
+			viewed = Unseen
+			agent = Research Advancement Division
+			agentName = Research Advancement Division
+			deadlineType = None
+			expiryType = Floating
+			ignoresWeight = True
+			values = 1132980,0,1750,4800,4375,0,4,0,1135915.60823791,0,0,0
+			subtype = RAD_Leftovers
+			title = Gather leftover data for experiments on Kerbin
+			description = It came to our attention that there's some experiments that you've done, for which the data we received is yet incomplete. This of course cannot stand, how are we to explain this to our superiors?! Go and remedy the situation with all due haste. Do be diligent, I'm sure there's still a vacancy in the testing department for you otherwise. I'm sure you understand.
+			synopsis = <color=yellow>Gather the remaining data for experiments on Kerbin. Pay attention to the necessary recovery method!</color>
+			completedMessage = Finally some satisfactory data. You may continue... for now.
+			hash = 260641123
 			targetBody = Kerbin
 			PARAM
 			{
@@ -2583,26 +3373,25 @@ GAME
 				id = CollectScience
 				state = Incomplete
 				disableOnStateChange = False
-				values = 2855,0,0,0,0
-				ContractIdentifier = FieldResearch.FS_KSC
+				values = 2114,0,0,0,0
+				ContractIdentifier = RAD.RAD_Leftovers
 				title = 
 				notes = 
 				completedMessage = 
 				allowStateReset = False
 				targetBody = Kerbin
-				biome = Administration
-				situation = SrfLanded
+				situation = InSpaceLow
 				experiment = mysteryGoo
 				recoveryMethod = Ideal
 				PARAM
 				{
 					name = ParameterDelegate`1
-					id = biome
+					id = destination
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_KSC
-					title = Location: KSC’s Administration
+					ContractIdentifier = RAD.RAD_Leftovers
+					title = Destination: Kerbin
 					notes = 
 					completedMessage = 
 				}
@@ -2613,8 +3402,8 @@ GAME
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_KSC
-					title = Situation: Landed
+					ContractIdentifier = RAD.RAD_Leftovers
+					title = Situation: Low in space
 					notes = 
 					completedMessage = 
 				}
@@ -2625,7 +3414,7 @@ GAME
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_KSC
+					ContractIdentifier = RAD.RAD_Leftovers
 					title = Experiment: Mystery Goo™ Observation
 					notes = 
 					completedMessage = 
@@ -2636,7 +3425,7 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = FieldResearch.FS_KSC
+						ContractIdentifier = RAD.RAD_Leftovers
 						title = 
 						notes = 
 						completedMessage = 
@@ -2648,241 +3437,7 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = FieldResearch.FS_KSC
-						title = Recovery: Recover
-						notes = 
-						completedMessage = 
-					}
-				}
-			}
-			PARAM
-			{
-				name = CollectScienceCustom
-				id = CollectScience
-				state = Incomplete
-				disableOnStateChange = False
-				values = 3124,0,0,0,0
-				ContractIdentifier = FieldResearch.FS_KSC
-				title = 
-				notes = 
-				completedMessage = 
-				allowStateReset = False
-				targetBody = Kerbin
-				biome = R&D
-				situation = SrfLanded
-				experiment = mysteryGoo
-				recoveryMethod = Ideal
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = biome
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_KSC
-					title = Location: KSC’s R&D
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = situation
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_KSC
-					title = Situation: Landed
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = experiment
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_KSC
-					title = Experiment: Mystery Goo™ Observation
-					notes = 
-					completedMessage = 
-					PARAM
-					{
-						name = ParameterDelegate`1
-						id = mysteryGooSubject
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						ContractIdentifier = FieldResearch.FS_KSC
-						title = 
-						notes = 
-						completedMessage = 
-					}
-					PARAM
-					{
-						name = ParameterDelegate`1
-						id = recovery
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						ContractIdentifier = FieldResearch.FS_KSC
-						title = Recovery: Recover
-						notes = 
-						completedMessage = 
-					}
-				}
-			}
-			PARAM
-			{
-				name = CollectScienceCustom
-				id = CollectScience
-				state = Incomplete
-				disableOnStateChange = False
-				values = 2144,0,0,0,0
-				ContractIdentifier = FieldResearch.FS_KSC
-				title = 
-				notes = 
-				completedMessage = 
-				allowStateReset = False
-				targetBody = Kerbin
-				biome = KSC
-				situation = SrfLanded
-				experiment = mysteryGoo
-				recoveryMethod = Ideal
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = biome
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_KSC
-					title = Location: KSC
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = situation
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_KSC
-					title = Situation: Landed
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = experiment
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_KSC
-					title = Experiment: Mystery Goo™ Observation
-					notes = 
-					completedMessage = 
-					PARAM
-					{
-						name = ParameterDelegate`1
-						id = mysteryGooSubject
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						ContractIdentifier = FieldResearch.FS_KSC
-						title = 
-						notes = 
-						completedMessage = 
-					}
-					PARAM
-					{
-						name = ParameterDelegate`1
-						id = recovery
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						ContractIdentifier = FieldResearch.FS_KSC
-						title = Recovery: Recover
-						notes = 
-						completedMessage = 
-					}
-				}
-			}
-			PARAM
-			{
-				name = CollectScienceCustom
-				id = CollectScience
-				state = Incomplete
-				disableOnStateChange = False
-				values = 3147,0,0,0,0
-				ContractIdentifier = FieldResearch.FS_KSC
-				title = 
-				notes = 
-				completedMessage = 
-				allowStateReset = False
-				targetBody = Kerbin
-				biome = Crawlerway
-				situation = SrfLanded
-				experiment = mysteryGoo
-				recoveryMethod = Ideal
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = biome
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_KSC
-					title = Location: KSC’s Crawlerway
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = situation
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_KSC
-					title = Situation: Landed
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = experiment
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_KSC
-					title = Experiment: Mystery Goo™ Observation
-					notes = 
-					completedMessage = 
-					PARAM
-					{
-						name = ParameterDelegate`1
-						id = mysteryGooSubject
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						ContractIdentifier = FieldResearch.FS_KSC
-						title = 
-						notes = 
-						completedMessage = 
-					}
-					PARAM
-					{
-						name = ParameterDelegate`1
-						id = recovery
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						ContractIdentifier = FieldResearch.FS_KSC
+						ContractIdentifier = RAD.RAD_Leftovers
 						title = Recovery: Recover
 						notes = 
 						completedMessage = 
@@ -2892,10 +3447,218 @@ GAME
 		}
 		CONTRACT
 		{
-			guid = 5c25ba2d-b9b0-4fdc-a8ca-30c27b9ad673
+			guid = ba9794d1-70f9-4fcb-81ce-0e0134044916
+			type = ConfiguredContract
+			prestige = 1
+			seed = 1323087487
+			state = Offered
+			viewed = Unseen
+			agent = Kerbal Space Tourism
+			agentName = Kerbal Space Tourism
+			deadlineType = None
+			expiryType = Floating
+			ignoresWeight = True
+			values = 2148900,0,0,40000,0,0,1,25,2151835.66823791,0,0,0
+			subtype = Tourism_FirstTourist
+			title = Kick off space tourism
+			description = We've been offered an interesting opportunity. Millionnaire Tito Kerman dreams of going to space. Unlike most Kerbals who simply show up at the astronaut complex, Tito is willing to pay his way into space. A new corporation has been set up for space tourists, all we have to do is bring one extra Kerbal to space for 4 hours. We were going there anyway...
+			synopsis = Help Tito Kerman visit space.
+			completedMessage = Tito's funds are going to spend very well!
+			hash = 102476436
+			targetBody = Kerbin
+			BEHAVIOUR
+			{
+				type = ContractConfigurator.Behaviour.SpawnPassengers
+				count = 1
+				KERBAL
+				{
+					name = Tito Kerman
+					gender = Male
+					experienceTrait = Scientist
+					kerbalType = Tourist
+				}
+			}
+			BEHAVIOUR
+			{
+				type = ContractConfigurator.Behaviour.Expression
+				CONTRACT_OFFERED
+				{
+				}
+				CONTRACT_ACCEPTED
+				{
+				}
+				CONTRACT_COMPLETED_SUCCESS
+				{
+					type = Double
+					TouristCount = 1
+					TouristLowOrbitCount = 1
+				}
+				CONTRACT_COMPLETED_FAILURE
+				{
+				}
+			}
+			PARAM
+			{
+				name = VesselParameterGroup
+				id = VesselParameterGroup
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = Tourism.Tourism_FirstTourist
+				title = 
+				notes = 
+				completedMessage = 
+				duration = 14400
+				dissassociateVesselsOnContractFailure = True
+				dissassociateVesselsOnContractCompletion = False
+				resetChildrenWhenVesselDestroyed = False
+				PARAM
+				{
+					name = HasCrew
+					id = HasCrew
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = Tourism.Tourism_FirstTourist
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					trait = Pilot
+					minCrew = 1
+					maxCrew = 2147483647
+					minExperience = 0
+					maxExperience = 5
+					crewOnly = False
+					PARAM
+					{
+						name = ParameterDelegate`1
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = Tourism.Tourism_FirstTourist
+						title = Trait: Pilot
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = CountParameterDelegate`1
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = Tourism.Tourism_FirstTourist
+						title = Count: At least one
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = HasPassengers
+					id = HasPassengers
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = Tourism.Tourism_FirstTourist
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					index = 0
+					count = 0
+				}
+				PARAM
+				{
+					name = OrbitParameter
+					id = Orbit
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = Tourism.Tourism_FirstTourist
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					situation = ORBITING
+					targetBody = Kerbin
+					minAltitude = 0
+					minApoapsis = 0
+					minPeriapsis = 75000
+					minEccentricity = 0
+					minInclination = 0
+					maxInclination = 180
+					minArgumentOfPeriapsis = 0
+					maxArgumentOfPeriapsis = 360
+					minPeriod = 0
+					displayNotes = False
+					PARAM
+					{
+						name = ParameterDelegate`1
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = Tourism.Tourism_FirstTourist
+						title = Destination: Kerbin
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = Tourism.Tourism_FirstTourist
+						title = Situation: Orbit
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = Tourism.Tourism_FirstTourist
+						title = Periapsis: Above 75,000 m
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					optional = True
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = Tourism.Tourism_FirstTourist
+					title = Duration: 04:00:00
+					notes = 
+					completedMessage = 
+				}
+			}
+			PARAM
+			{
+				name = RecoverKerbalCustom
+				id = RecoverKerbal
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = Tourism.Tourism_FirstTourist
+				title = 
+				notes = 
+				completedMessage = 
+				completeInSequence = True
+				count = 0
+				index = 0
+			}
+		}
+		CONTRACT
+		{
+			guid = 2bb4d02e-8873-4e0c-a9ee-f66a34479248
 			type = ConfiguredContract
 			prestige = 2
-			seed = 1359888482
+			seed = 1492307228
 			state = Offered
 			viewed = Unseen
 			agent = Far Out Tourism
@@ -2903,10 +3666,10 @@ GAME
 			deadlineType = None
 			expiryType = Floating
 			ignoresWeight = True
-			values = 204840,216000,43442.3944497847,173769.577799139,86884.7888995694,0,4,15,205340.790324097,0,0,0
+			values = 213720,216000,53494.0180529573,213976.072211829,106988.036105915,0,4,15,216655.708237913,0,0,0
 			subtype = TourismUnderwaterAdventure
-			title = Underwater Adventure on Kerbin with two tourists
-			description = This group of two tourists wishes to go for an underwater adventure on Kerbin
+			title = Underwater Adventure on Kerbin with four tourists
+			description = This group of four tourists wishes to go for an underwater adventure on Kerbin
 			synopsis = Bring these tourists underwater on Kerbin then bring them home
 			completedMessage = The tourists have successfully made it back from their underwater adventure on Kerbin
 			hash = 999677177
@@ -2918,7 +3681,7 @@ GAME
 			BEHAVIOUR
 			{
 				type = ContractConfigurator.Behaviour.SpawnPassengers
-				count = 2
+				count = 4
 			}
 			BEHAVIOUR
 			{
@@ -3077,46 +3840,42 @@ GAME
 		}
 		CONTRACT
 		{
-			guid = 1f51196f-6a0b-467b-b2b5-b159076a1971
+			guid = 60c4e58a-7b8c-42d0-8180-6d32cbe5d970
 			type = ConfiguredContract
-			prestige = 0
-			seed = 1284326739
+			prestige = 1
+			seed = 130641499
 			state = Offered
 			viewed = Unseen
-			agent = Field Research Team
-			agentName = Field Research Team
+			agent = Research Advancement Division
+			agentName = Research Advancement Division
 			deadlineType = None
 			expiryType = Floating
 			ignoresWeight = True
-			values = 1365060,0,0,8832,0,0,3,0,1366446.28301331,0,0,0
-			subtype = FS_Experiment
-			title = Perform Temperature scan experiments on Kerbin
-			description = Wernher is especially excited to try some temperature scan experiments at various locations on Kerbin.  We doubt the results will be much different from the last study Wernher commissioned...  but he's the boss!
-			synopsis = Run the temperature scan experiments on Kerbin.
-			completedMessage = Yup, that's definitely a lot of temperature scan results.  Just put the data in a spreadsheet and we'll look at it later.
-			hash = 89297271
+			values = 1046040,0,1970,3000,4926,0,5,0,1048976.38823791,0,0,0
+			subtype = RAD_SurfaceMulti
+			title = Analyze the surface at Kerbin’s Tundra and Kerbin’s Tundra
+			description = One of our resident scientists has had an epiphany. They're saying our experimental data would be improved if we performed the same experiments in multiple locations. Something about causality, correlation, significancy and all that. Don't worry we're not sure either. The point is, our scientist's enthusiasm has brought in more budget from our sponsors. Under condition that we actually do those experiments of course. We can't be bothered with such menial work, naturally. Go and analyze Kerbin’s Tundra and Kerbin’s Tundra from the surface for us.
+			synopsis = <color=yellow>Send a craft onto the surface of Kerbin at Kerbin’s Tundra and Kerbin’s Tundra and perform the required experiments.</color>
+			completedMessage = Well, well. It looks like our dear scientist wasn't all up in the cuckoo's nest after all. Don't go telling them this though, next they'll want a promotion, a raise, or some other unwanted complication.
+			hash = -1908611707
 			targetBody = Kerbin
-			UNIQUE_DATA
-			{
-				experiment = ScienceExperiment:temperatureScan
-			}
 			PARAM
 			{
 				name = CollectScienceCustom
 				id = CollectScience
 				state = Incomplete
 				disableOnStateChange = False
-				values = 5403,0,0,0,0
-				ContractIdentifier = FieldResearch.FS_Experiment
+				values = 4841,0,0,0,0
+				ContractIdentifier = RAD.RAD_SurfaceMulti
 				title = 
 				notes = 
 				completedMessage = 
 				allowStateReset = False
 				targetBody = Kerbin
-				biome = Badlands
+				biome = Tundra
 				situation = SrfLanded
-				experiment = temperatureScan
-				recoveryMethod = Ideal
+				experiment = barometerScan
+				recoveryMethod = RecoverOrTransmit
 				PARAM
 				{
 					name = ParameterDelegate`1
@@ -3124,8 +3883,8 @@ GAME
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_Experiment
-					title = Biome: Kerbin’s Badlands
+					ContractIdentifier = RAD.RAD_SurfaceMulti
+					title = Biome: Kerbin’s Tundra
 					notes = 
 					completedMessage = 
 				}
@@ -3136,7 +3895,7 @@ GAME
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_Experiment
+					ContractIdentifier = RAD.RAD_SurfaceMulti
 					title = Situation: Landed
 					notes = 
 					completedMessage = 
@@ -3148,18 +3907,18 @@ GAME
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_Experiment
-					title = Experiment: Temperature Scan
+					ContractIdentifier = RAD.RAD_SurfaceMulti
+					title = Experiment: Atmospheric Pressure Scan
 					notes = 
 					completedMessage = 
 					PARAM
 					{
 						name = ParameterDelegate`1
-						id = temperatureScanSubject
+						id = barometerScanSubject
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = FieldResearch.FS_Experiment
+						ContractIdentifier = RAD.RAD_SurfaceMulti
 						title = 
 						notes = 
 						completedMessage = 
@@ -3171,8 +3930,8 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = FieldResearch.FS_Experiment
-						title = Recovery: Recover
+						ContractIdentifier = RAD.RAD_SurfaceMulti
+						title = Recovery: Recover or transmit
 						notes = 
 						completedMessage = 
 					}
@@ -3184,25 +3943,26 @@ GAME
 				id = CollectScience
 				state = Incomplete
 				disableOnStateChange = False
-				values = 4110,0,0,0,0
-				ContractIdentifier = FieldResearch.FS_Experiment
+				values = 4898,0,0,0,0
+				ContractIdentifier = RAD.RAD_SurfaceMulti
 				title = 
 				notes = 
 				completedMessage = 
 				allowStateReset = False
 				targetBody = Kerbin
-				situation = FlyingHigh
+				biome = Tundra
+				situation = SrfSplashed
 				experiment = temperatureScan
-				recoveryMethod = Ideal
+				recoveryMethod = RecoverOrTransmit
 				PARAM
 				{
 					name = ParameterDelegate`1
-					id = destination
+					id = biome
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_Experiment
-					title = Destination: Kerbin
+					ContractIdentifier = RAD.RAD_SurfaceMulti
+					title = Biome: Kerbin’s Tundra
 					notes = 
 					completedMessage = 
 				}
@@ -3213,8 +3973,8 @@ GAME
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_Experiment
-					title = Situation: Flying high
+					ContractIdentifier = RAD.RAD_SurfaceMulti
+					title = Situation: Splashed down
 					notes = 
 					completedMessage = 
 				}
@@ -3225,7 +3985,7 @@ GAME
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_Experiment
+					ContractIdentifier = RAD.RAD_SurfaceMulti
 					title = Experiment: Temperature Scan
 					notes = 
 					completedMessage = 
@@ -3236,7 +3996,7 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = FieldResearch.FS_Experiment
+						ContractIdentifier = RAD.RAD_SurfaceMulti
 						title = 
 						notes = 
 						completedMessage = 
@@ -3248,8 +4008,8 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = FieldResearch.FS_Experiment
-						title = Recovery: Recover
+						ContractIdentifier = RAD.RAD_SurfaceMulti
+						title = Recovery: Recover or transmit
 						notes = 
 						completedMessage = 
 					}
@@ -3261,25 +4021,26 @@ GAME
 				id = CollectScience
 				state = Incomplete
 				disableOnStateChange = False
-				values = 5325,0,0,0,0
-				ContractIdentifier = FieldResearch.FS_Experiment
+				values = 4056,0,0,0,0
+				ContractIdentifier = RAD.RAD_SurfaceMulti
 				title = 
 				notes = 
 				completedMessage = 
 				allowStateReset = False
 				targetBody = Kerbin
-				situation = InSpaceLow
+				biome = Tundra
+				situation = SrfLanded
 				experiment = temperatureScan
-				recoveryMethod = Ideal
+				recoveryMethod = RecoverOrTransmit
 				PARAM
 				{
 					name = ParameterDelegate`1
-					id = destination
+					id = biome
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_Experiment
-					title = Destination: Kerbin
+					ContractIdentifier = RAD.RAD_SurfaceMulti
+					title = Biome: Kerbin’s Tundra
 					notes = 
 					completedMessage = 
 				}
@@ -3290,8 +4051,8 @@ GAME
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_Experiment
-					title = Situation: Low in space
+					ContractIdentifier = RAD.RAD_SurfaceMulti
+					title = Situation: Landed
 					notes = 
 					completedMessage = 
 				}
@@ -3302,7 +4063,7 @@ GAME
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_Experiment
+					ContractIdentifier = RAD.RAD_SurfaceMulti
 					title = Experiment: Temperature Scan
 					notes = 
 					completedMessage = 
@@ -3313,7 +4074,7 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = FieldResearch.FS_Experiment
+						ContractIdentifier = RAD.RAD_SurfaceMulti
 						title = 
 						notes = 
 						completedMessage = 
@@ -3325,7 +4086,1624 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = FieldResearch.FS_Experiment
+						ContractIdentifier = RAD.RAD_SurfaceMulti
+						title = Recovery: Recover or transmit
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+			PARAM
+			{
+				name = CollectScienceCustom
+				id = CollectScience
+				state = Incomplete
+				disableOnStateChange = False
+				values = 3285,0,0,0,0
+				ContractIdentifier = RAD.RAD_SurfaceMulti
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = False
+				targetBody = Kerbin
+				biome = Tundra
+				situation = SrfSplashed
+				experiment = mysteryGoo
+				recoveryMethod = RecoverOrTransmit
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = biome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_SurfaceMulti
+					title = Biome: Kerbin’s Tundra
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = situation
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_SurfaceMulti
+					title = Situation: Splashed down
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_SurfaceMulti
+					title = Experiment: Mystery Goo™ Observation
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = mysteryGooSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_SurfaceMulti
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_SurfaceMulti
+						title = Recovery: Recover or transmit
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+			PARAM
+			{
+				name = CollectScienceCustom
+				id = CollectScience
+				state = Incomplete
+				disableOnStateChange = False
+				values = 3024,0,0,0,0
+				ContractIdentifier = RAD.RAD_SurfaceMulti
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = False
+				targetBody = Kerbin
+				biome = Tundra
+				situation = SrfLanded
+				experiment = mysteryGoo
+				recoveryMethod = RecoverOrTransmit
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = biome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_SurfaceMulti
+					title = Biome: Kerbin’s Tundra
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = situation
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_SurfaceMulti
+					title = Situation: Landed
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_SurfaceMulti
+					title = Experiment: Mystery Goo™ Observation
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = mysteryGooSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_SurfaceMulti
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_SurfaceMulti
+						title = Recovery: Recover or transmit
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+			PARAM
+			{
+				name = CollectScienceCustom
+				id = CollectScience
+				state = Incomplete
+				disableOnStateChange = False
+				values = 4550,0,0,0,0
+				ContractIdentifier = RAD.RAD_SurfaceMulti
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = False
+				targetBody = Kerbin
+				biome = Tundra
+				situation = SrfSplashed
+				experiment = barometerScan
+				recoveryMethod = RecoverOrTransmit
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = biome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_SurfaceMulti
+					title = Biome: Kerbin’s Tundra
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = situation
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_SurfaceMulti
+					title = Situation: Splashed down
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_SurfaceMulti
+					title = Experiment: Atmospheric Pressure Scan
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = barometerScanSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_SurfaceMulti
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_SurfaceMulti
+						title = Recovery: Recover or transmit
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = 0e2ef750-a428-442a-af37-6d923892a137
+			type = ConfiguredContract
+			prestige = 1
+			seed = 2030397203
+			state = Offered
+			viewed = Unseen
+			agent = Far Out Tourism
+			agentName = Far Out Tourism
+			deadlineType = Floating
+			expiryType = Floating
+			ignoresWeight = True
+			values = 132060,633724.778131315,114830.081697523,459320.326790094,229660.163395047,0,6,12,134996.628237913,0,0,0
+			subtype = TourismFlybyTour
+			title = Flyby of Kerbin and its 2 moons with three tourists
+			description = This group of three tourists wishes to do a flyby of Kerbin and its 2 moons
+			synopsis = Flyby of Kerbin and its 2 moons then bring them home
+			completedMessage = The tourists have successfully made it back from Kerbin
+			hash = -339195164
+			targetBody = Kerbin
+			UNIQUE_DATA
+			{
+				body = CelestialBody:Kerbin
+			}
+			BEHAVIOUR
+			{
+				type = ContractConfigurator.Behaviour.SpawnPassengers
+				count = 3
+			}
+			BEHAVIOUR
+			{
+				type = TourismExpanded.SetDeadline
+			}
+			BEHAVIOUR
+			{
+				type = TourismExpanded.SetRewardFunds
+			}
+			PARAM
+			{
+				name = VesselParameterGroup
+				id = VesselParameterGroup
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = TourismExpanded.TourismFlybyTour
+				title = Do a flyby of Kerbin
+				notes = 
+				completedMessage = 
+				hidden = True
+				duration = 0
+				dissassociateVesselsOnContractFailure = True
+				dissassociateVesselsOnContractCompletion = False
+				resetChildrenWhenVesselDestroyed = False
+				PARAM
+				{
+					name = HasCrew
+					id = HasCrew
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = TourismExpanded.TourismFlybyTour
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					trait = Pilot
+					minCrew = 1
+					maxCrew = 2147483647
+					minExperience = 0
+					maxExperience = 5
+					crewOnly = False
+					PARAM
+					{
+						name = ParameterDelegate`1
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = TourismExpanded.TourismFlybyTour
+						title = Trait: Pilot
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = CountParameterDelegate`1
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = TourismExpanded.TourismFlybyTour
+						title = Count: At least one
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = HasPassengers
+					id = HasPassengers
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = TourismExpanded.TourismFlybyTour
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					index = 0
+					count = 0
+				}
+				PARAM
+				{
+					name = ReachState
+					id = ReachState
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = TourismExpanded.TourismFlybyTour
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					targetBody = Kerbin
+					maxAltitude = 250000
+					PARAM
+					{
+						name = ParameterDelegate`1
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = TourismExpanded.TourismFlybyTour
+						title = Destination: Kerbin
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = TourismExpanded.TourismFlybyTour
+						title = Altitude: Below 250,000 m
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+			PARAM
+			{
+				name = VesselParameterGroup
+				id = VesselParameterGroup
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = TourismExpanded.TourismFlybyTour
+				title = Do a flyby of Kerbin's 2 moons
+				notes = 
+				completedMessage = 
+				duration = 0
+				dissassociateVesselsOnContractFailure = True
+				dissassociateVesselsOnContractCompletion = False
+				resetChildrenWhenVesselDestroyed = False
+				PARAM
+				{
+					name = HasCrew
+					id = HasCrew
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = TourismExpanded.TourismFlybyTour
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					trait = Pilot
+					minCrew = 1
+					maxCrew = 2147483647
+					minExperience = 0
+					maxExperience = 5
+					crewOnly = False
+					PARAM
+					{
+						name = ParameterDelegate`1
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = TourismExpanded.TourismFlybyTour
+						title = Trait: Pilot
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = CountParameterDelegate`1
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = TourismExpanded.TourismFlybyTour
+						title = Count: At least one
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = HasPassengers
+					id = HasPassengers
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = TourismExpanded.TourismFlybyTour
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					index = 0
+					count = 0
+				}
+				PARAM
+				{
+					name = ReachState
+					id = ReachState
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = TourismExpanded.TourismFlybyTour
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = False
+					targetBody = Mun
+					maxAltitude = 60000
+					PARAM
+					{
+						name = ParameterDelegate`1
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = TourismExpanded.TourismFlybyTour
+						title = Destination: The Mun
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = TourismExpanded.TourismFlybyTour
+						title = Altitude: Below 60,000 m
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = ReachState
+					id = ReachState
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = TourismExpanded.TourismFlybyTour
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = False
+					targetBody = Minmus
+					maxAltitude = 30000
+					PARAM
+					{
+						name = ParameterDelegate`1
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = TourismExpanded.TourismFlybyTour
+						title = Destination: Minmus
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = TourismExpanded.TourismFlybyTour
+						title = Altitude: Below 30,000 m
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+			PARAM
+			{
+				name = RecoverKerbalCustom
+				id = RecoverKerbal
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = TourismExpanded.TourismFlybyTour
+				title = 
+				notes = 
+				completedMessage = 
+				completeInSequence = True
+				count = 0
+				index = 0
+			}
+		}
+		CONTRACT
+		{
+			guid = 05761cfd-47f0-4ad9-884e-d567026fbbab
+			type = ConfiguredContract
+			prestige = 2
+			seed = 215507891
+			state = Offered
+			viewed = Unseen
+			agent = Research Advancement Division
+			agentName = Research Advancement Division
+			deadlineType = None
+			expiryType = Floating
+			ignoresWeight = True
+			values = 889680,0,2306,3600,5765,0,3,0,892616.768237913,0,0,0
+			subtype = RAD_Orbital
+			title = Perform an orbital study from orbit of Kerbin.
+			description = We know that Kerbin is a place of mystery, of intrigue. But mostly, it's a place we, and by we we mean you, have not done enough science yet. Get out to space around it and don't come back until you've done all the requested experiments!
+			synopsis = <color=yellow>Send a craft into space around Kerbin and perform the requested experiments. Be mindful of the altitudes required.</color>
+			completedMessage = That'll do, for now anyway. You may leave the results on the desk.
+			hash = -760069424
+			targetBody = Kerbin
+			PARAM
+			{
+				name = CollectScienceCustom
+				id = CollectScience
+				state = Incomplete
+				disableOnStateChange = False
+				values = 3584,0,0,0,0
+				ContractIdentifier = RAD.RAD_Orbital
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = False
+				targetBody = Kerbin
+				situation = InSpaceHigh
+				experiment = barometerScan
+				recoveryMethod = RecoverOrTransmit
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = destination
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Orbital
+					title = Destination: Kerbin
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = situation
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Orbital
+					title = Situation: High in space
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Orbital
+					title = Experiment: Atmospheric Pressure Scan
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = barometerScanSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Orbital
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Orbital
+						title = Recovery: Recover or transmit
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+			PARAM
+			{
+				name = CollectScienceCustom
+				id = CollectScience
+				state = Incomplete
+				disableOnStateChange = False
+				values = 4272,0,0,0,0
+				ContractIdentifier = RAD.RAD_Orbital
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = False
+				targetBody = Kerbin
+				situation = InSpaceHigh
+				experiment = mysteryGoo
+				recoveryMethod = RecoverOrTransmit
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = destination
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Orbital
+					title = Destination: Kerbin
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = situation
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Orbital
+					title = Situation: High in space
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Orbital
+					title = Experiment: Mystery Goo™ Observation
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = mysteryGooSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Orbital
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Orbital
+						title = Recovery: Recover or transmit
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+			PARAM
+			{
+				name = CollectScienceCustom
+				id = CollectScience
+				state = Incomplete
+				disableOnStateChange = False
+				values = 4488,0,0,0,0
+				ContractIdentifier = RAD.RAD_Orbital
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = False
+				targetBody = Kerbin
+				situation = InSpaceHigh
+				experiment = temperatureScan
+				recoveryMethod = RecoverOrTransmit
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = destination
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Orbital
+					title = Destination: Kerbin
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = situation
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Orbital
+					title = Situation: High in space
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Orbital
+					title = Experiment: Temperature Scan
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = temperatureScanSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Orbital
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Orbital
+						title = Recovery: Recover or transmit
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = 01ff0214-17e7-46f9-9c8a-a0d6e46606b6
+			type = ConfiguredContract
+			prestige = 1
+			seed = 340274131
+			state = Offered
+			viewed = Unseen
+			agent = Research Advancement Division
+			agentName = Research Advancement Division
+			deadlineType = None
+			expiryType = Floating
+			ignoresWeight = True
+			values = 1895940,0,1640,4500,4099,0,4,0,1898876.88823791,0,0,0
+			subtype = RAD_LocalFlight
+			title = Execute a local observation flight at Kerbin’s Tundra
+			description = I'm sure you're aware of the existence of Kerbin’s Tundra. We certainly are. What you may not be aware of, is that we think Kerbin’s Tundra is a strange place. More specifically, according to our highly sophisticated **REDACTED** this area has a high potential for **REDACTED**. The only way to be sure however, is for you to send some hardware over there and confirm.
+			synopsis = <color=yellow>Send a craft to the sky above Kerbin’s Tundra and perform the required experiments.</color>
+			completedMessage = What wonderful news! These discoveries will surely forever change the **REDACTED** of our great **REDACTED**!
+			hash = -1460790336
+			targetBody = Kerbin
+			UNIQUE_DATA
+			{
+				biome1 = Biome:Kerbin;Tundra
+			}
+			PARAM
+			{
+				name = CollectScienceCustom
+				id = CollectScience
+				state = Incomplete
+				disableOnStateChange = False
+				values = 9998,0,0,0,0
+				ContractIdentifier = RAD.RAD_LocalFlight
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = False
+				targetBody = Kerbin
+				biome = Tundra
+				situation = FlyingLow
+				experiment = temperatureScan
+				experiment = crewReport
+				recoveryMethod = RecoverOrTransmit
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = biome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_LocalFlight
+					title = Biome: Kerbin’s Tundra
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = situation
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_LocalFlight
+					title = Situation: Flying low
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_LocalFlight
+					title = Experiment: Temperature Scan
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = temperatureScanSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_LocalFlight
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_LocalFlight
+						title = Recovery: Recover or transmit
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_LocalFlight
+					title = Experiment: Crew Report
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = crewReportSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_LocalFlight
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_LocalFlight
+						title = Recovery: Recover or transmit
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = 23dce0cf-e639-4f09-8a8f-a36f7153e31f
+			type = ConfiguredContract
+			prestige = 1
+			seed = 1619282052
+			state = Offered
+			viewed = Unseen
+			agent = Research Advancement Division
+			agentName = Research Advancement Division
+			deadlineType = None
+			expiryType = Floating
+			ignoresWeight = True
+			values = 657720,0,2951,4500,7377,0,4,0,660656.948237913,0,0,0
+			subtype = RAD_Atmo
+			title = Investigate the atmosphere in several areas on Kerbin
+			description = With all this focus on space stuff all around this place you'd almost forget that there's interesting things that are not in space, too! One of the eggheads told us (implored, even) that studying atmospheric phenomena is at least as valuable for our... science program. Or was he talking about the lab's airconditioning.. That might explain why he turned just a little greener than usual. Just be sure, get out there and get some atmospheric data from the skies of Kerbin for us, will you?
+			synopsis = <color=yellow>Investigate the atmosphere on Kerbin, perform the required experiments. Take note which areas are requested!</color>
+			completedMessage = Yeah sorry, it was definitely the airconditioning. We'll file your report somewhere safe, who knows someone may actually look at it within a few years. Or a hundred.
+			hash = -640013592
+			targetBody = Kerbin
+			PARAM
+			{
+				name = CollectScienceCustom
+				id = CollectScience
+				state = Incomplete
+				disableOnStateChange = False
+				values = 3502,0,0,0,0
+				ContractIdentifier = RAD.RAD_Atmo
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = False
+				targetBody = Kerbin
+				biome = Tundra
+				situation = FlyingLow
+				experiment = crewReport
+				recoveryMethod = RecoverOrTransmit
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = biome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Atmo
+					title = Biome: Kerbin’s Tundra
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = situation
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Atmo
+					title = Situation: Flying low
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Atmo
+					title = Experiment: Crew Report
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = crewReportSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Atmo
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Atmo
+						title = Recovery: Recover or transmit
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+			PARAM
+			{
+				name = CollectScienceCustom
+				id = CollectScience
+				state = Incomplete
+				disableOnStateChange = False
+				values = 4183,0,0,0,0
+				ContractIdentifier = RAD.RAD_Atmo
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = False
+				targetBody = Kerbin
+				biome = Tundra
+				situation = FlyingLow
+				experiment = temperatureScan
+				recoveryMethod = RecoverOrTransmit
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = biome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Atmo
+					title = Biome: Kerbin’s Tundra
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = situation
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Atmo
+					title = Situation: Flying low
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Atmo
+					title = Experiment: Temperature Scan
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = temperatureScanSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Atmo
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Atmo
+						title = Recovery: Recover or transmit
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = e621f51a-c028-4ab4-baba-217c2252ba91
+			type = ConfiguredContract
+			prestige = 1
+			seed = 55489185
+			state = Offered
+			viewed = Unseen
+			agent = Research Advancement Division
+			agentName = Research Advancement Division
+			deadlineType = None
+			expiryType = Floating
+			ignoresWeight = True
+			values = 369480,0,2287,4500,5716,0,3,0,372417.028237913,0,0,0
+			subtype = RAD_Surface
+			title = Gather data from the surface at Kerbin’s Tundra
+			description = We've obtained some good imagery of the surface of Kerbin. Normally this would be none of your concern, but there's something odd with these pictures. Our top labcoats are confused, even the janitor was clueless. There's this smear you see. Or is it a smudge? A speck? Or a blur..? Well nevermind, whatever it is, it's located at Kerbin’s Tundra. We want you to go there and get some properly close up and personal info on the area. Get to the surface over there and report back what you find.
+			synopsis = <color=yellow>Send a craft onto the surface of Kerbin and perform the required experiments.</color>
+			completedMessage = That's odd, the data you've gathered shows nothing out of the ordinary. How perfectly unsatisfying. We're still going to fire that janitor.
+			hash = 306474467
+			targetBody = Kerbin
+			UNIQUE_DATA
+			{
+				biome1 = Biome:Kerbin;Tundra
+			}
+			PARAM
+			{
+				name = CollectScienceCustom
+				id = CollectScience
+				state = Incomplete
+				disableOnStateChange = False
+				values = 24998,0,0,0,0
+				ContractIdentifier = RAD.RAD_Surface
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = False
+				targetBody = Kerbin
+				biome = Tundra
+				situation = SrfLanded
+				experiment = crewReport
+				experiment = evaReport
+				experiment = evaReport
+				experiment = mysteryGoo
+				experiment = mysteryGoo
+				experiment = temperatureScan
+				experiment = temperatureScan
+				experiment = barometerScan
+				experiment = barometerScan
+				recoveryMethod = RecoverOrTransmit
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = biome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Surface
+					title = Biome: Kerbin’s Tundra
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = situation
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Surface
+					title = Situation: Landed
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Surface
+					title = Experiment: Crew Report
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = crewReportSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Surface
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Surface
+						title = Recovery: Recover or transmit
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Surface
+					title = Experiment: EVA Report
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = evaReportSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Surface
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Surface
+						title = Recovery: Recover or transmit
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Surface
+					title = Experiment: EVA Report
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = evaReportSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Surface
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Surface
+						title = Recovery: Recover or transmit
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Surface
+					title = Experiment: Mystery Goo™ Observation
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = mysteryGooSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Surface
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Surface
+						title = Recovery: Recover or transmit
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Surface
+					title = Experiment: Mystery Goo™ Observation
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = mysteryGooSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Surface
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Surface
+						title = Recovery: Recover or transmit
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Surface
+					title = Experiment: Temperature Scan
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = temperatureScanSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Surface
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Surface
+						title = Recovery: Recover or transmit
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Surface
+					title = Experiment: Temperature Scan
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = temperatureScanSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Surface
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Surface
+						title = Recovery: Recover or transmit
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Surface
+					title = Experiment: Atmospheric Pressure Scan
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = barometerScanSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Surface
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Surface
+						title = Recovery: Recover or transmit
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RAD.RAD_Surface
+					title = Experiment: Atmospheric Pressure Scan
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = barometerScanSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Surface
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RAD.RAD_Surface
+						title = Recovery: Recover or transmit
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = 31188c90-190a-4e09-b36c-adae27161d37
+			type = ConfiguredContract
+			prestige = 0
+			seed = 37313245
+			state = Offered
+			viewed = Unseen
+			agent = Field Research Team
+			agentName = Field Research Team
+			deadlineType = None
+			expiryType = Floating
+			ignoresWeight = True
+			values = 145800,0,0,5115,0,0,0,0,166580.189646343,0,0,0
+			subtype = FS_Scraps
+			title = Perform another Materials Study from Kerbin's Water
+			description = We've got some good materials study data from Kerbin's Water, but Wernher believes that we can learn more.  Re-run the experiment and get the data back home.
+			synopsis = Collect science about Materials Study from Kerbin's Water.
+			completedMessage = Great, let's hope that completes our knowledge of the topic.
+			hash = 1061140015
+			targetBody = Kerbin
+			UNIQUE_DATA
+			{
+				scienceSubject = ScienceSubject:mobileMaterialsLab@KerbinSrfSplashedWater
+			}
+			PARAM
+			{
+				name = CollectScienceCustom
+				id = CollectScience
+				state = Incomplete
+				disableOnStateChange = False
+				values = 0,0,0,0,0
+				ContractIdentifier = FieldResearch.FS_Scraps
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = False
+				targetBody = Kerbin
+				biome = Water
+				situation = SrfSplashed
+				experiment = mobileMaterialsLab
+				recoveryMethod = Ideal
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = biome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = FieldResearch.FS_Scraps
+					title = Biome: Kerbin’s Water
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = situation
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = FieldResearch.FS_Scraps
+					title = Situation: Splashed down
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = FieldResearch.FS_Scraps
+					title = Experiment: Materials Study
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = mobileMaterialsLabSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = FieldResearch.FS_Scraps
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = FieldResearch.FS_Scraps
 						title = Recovery: Recover
 						notes = 
 						completedMessage = 
@@ -3335,10 +5713,10 @@ GAME
 		}
 		CONTRACT
 		{
-			guid = e959a72c-d12f-4ff4-a106-e374f90baf94
+			guid = 23a432a3-e193-4fbc-8190-2a30b3c96152
 			type = ConfiguredContract
 			prestige = 0
-			seed = 2091421451
+			seed = 1406694739
 			state = Offered
 			viewed = Unseen
 			agent = Field Research Team
@@ -3346,7 +5724,7 @@ GAME
 			deadlineType = None
 			expiryType = Floating
 			ignoresWeight = True
-			values = 1647540,0,0,9678,0,0,5,0,1648926.52301331,0,0,0
+			values = 1512000,0,0,9775,0,0,4,0,1532793.78964634,0,0,0
 			subtype = FS_Experiment
 			title = Perform Mystery goo™ observation experiments on Kerbin
 			description = Wernher is especially excited to try some mystery goo™ observation experiments at various locations on Kerbin.  We doubt the results will be much different from the last study Wernher commissioned...  but he's the boss!
@@ -3364,7 +5742,7 @@ GAME
 				id = CollectScience
 				state = Incomplete
 				disableOnStateChange = False
-				values = 4624,0,0,0,0
+				values = 5608,0,0,0,0
 				ContractIdentifier = FieldResearch.FS_Experiment
 				title = 
 				notes = 
@@ -3382,7 +5760,6 @@ GAME
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_Experiment
 					title = Biome: Kerbin’s Tundra
 					notes = 
 					completedMessage = 
@@ -3394,7 +5771,6 @@ GAME
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_Experiment
 					title = Situation: Landed
 					notes = 
 					completedMessage = 
@@ -3406,7 +5782,6 @@ GAME
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_Experiment
 					title = Experiment: Mystery Goo™ Observation
 					notes = 
 					completedMessage = 
@@ -3417,7 +5792,6 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = FieldResearch.FS_Experiment
 						title = 
 						notes = 
 						completedMessage = 
@@ -3429,7 +5803,6 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = FieldResearch.FS_Experiment
 						title = Recovery: Recover
 						notes = 
 						completedMessage = 
@@ -3442,25 +5815,25 @@ GAME
 				id = CollectScience
 				state = Incomplete
 				disableOnStateChange = False
-				values = 4155,0,0,0,0
+				values = 5704,0,0,0,0
 				ContractIdentifier = FieldResearch.FS_Experiment
 				title = 
 				notes = 
 				completedMessage = 
 				allowStateReset = False
 				targetBody = Kerbin
-				situation = FlyingHigh
+				biome = TheColdOcean
+				situation = SrfLanded
 				experiment = mysteryGoo
 				recoveryMethod = Ideal
 				PARAM
 				{
 					name = ParameterDelegate`1
-					id = destination
+					id = biome
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_Experiment
-					title = Destination: Kerbin
+					title = Biome: Kerbin’s The Cold Ocean
 					notes = 
 					completedMessage = 
 				}
@@ -3471,8 +5844,7 @@ GAME
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_Experiment
-					title = Situation: Flying high
+					title = Situation: Landed
 					notes = 
 					completedMessage = 
 				}
@@ -3483,7 +5855,6 @@ GAME
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_Experiment
 					title = Experiment: Mystery Goo™ Observation
 					notes = 
 					completedMessage = 
@@ -3494,7 +5865,6 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = FieldResearch.FS_Experiment
 						title = 
 						notes = 
 						completedMessage = 
@@ -3506,7 +5876,6 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = FieldResearch.FS_Experiment
 						title = Recovery: Recover
 						notes = 
 						completedMessage = 
@@ -3519,25 +5888,25 @@ GAME
 				id = CollectScience
 				state = Incomplete
 				disableOnStateChange = False
-				values = 4240,0,0,0,0
+				values = 4829,0,0,0,0
 				ContractIdentifier = FieldResearch.FS_Experiment
 				title = 
 				notes = 
 				completedMessage = 
 				allowStateReset = False
 				targetBody = Kerbin
-				situation = InSpaceHigh
+				biome = ColdShores
+				situation = SrfLanded
 				experiment = mysteryGoo
 				recoveryMethod = Ideal
 				PARAM
 				{
 					name = ParameterDelegate`1
-					id = destination
+					id = biome
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_Experiment
-					title = Destination: Kerbin
+					title = Biome: Kerbin’s Cold Shores
 					notes = 
 					completedMessage = 
 				}
@@ -3548,8 +5917,7 @@ GAME
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_Experiment
-					title = Situation: High in space
+					title = Situation: Landed
 					notes = 
 					completedMessage = 
 				}
@@ -3560,7 +5928,6 @@ GAME
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = FieldResearch.FS_Experiment
 					title = Experiment: Mystery Goo™ Observation
 					notes = 
 					completedMessage = 
@@ -3571,7 +5938,6 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = FieldResearch.FS_Experiment
 						title = 
 						notes = 
 						completedMessage = 
@@ -3583,11 +5949,502 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = FieldResearch.FS_Experiment
 						title = Recovery: Recover
 						notes = 
 						completedMessage = 
 					}
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = d0434462-f0a9-4797-be4d-eb89df609f13
+			type = ConfiguredContract
+			prestige = 0
+			seed = 276139263
+			state = Offered
+			viewed = Unseen
+			agent = Field Research Team
+			agentName = Field Research Team
+			deadlineType = None
+			expiryType = Floating
+			ignoresWeight = True
+			values = 270540,0,0,12000,0,0,2,0,291334.729646343,0,0,0
+			subtype = FS_KSC
+			title = Perform experiments around KSC
+			description = There are lots of opportunities to do science around the Kerbal Space Center.  Wernher needs us to run a few tests at different locations as a control test of our experiments.
+			synopsis = Run the required tests around the Kerbal Space Center and recover the data.
+			completedMessage = Everything is looking good with these experiments, time to get them into space!
+			hash = 374140258
+			targetBody = Kerbin
+			PARAM
+			{
+				name = CollectScienceCustom
+				id = CollectScience
+				state = Incomplete
+				disableOnStateChange = False
+				values = 2482,0,0,0,0
+				ContractIdentifier = FieldResearch.FS_KSC
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = False
+				targetBody = Kerbin
+				biome = MissionControl
+				situation = SrfLanded
+				experiment = mobileMaterialsLab
+				recoveryMethod = Ideal
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = biome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					title = Location: KSC’s Mission Control
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = situation
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					title = Situation: Landed
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					title = Experiment: Materials Study
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = mobileMaterialsLabSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						title = Recovery: Recover
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+			PARAM
+			{
+				name = CollectScienceCustom
+				id = CollectScience
+				state = Incomplete
+				disableOnStateChange = False
+				values = 2304,0,0,0,0
+				ContractIdentifier = FieldResearch.FS_KSC
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = False
+				targetBody = Kerbin
+				biome = VAB
+				situation = SrfLanded
+				experiment = temperatureScan
+				recoveryMethod = Ideal
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = biome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					title = Location: KSC’s VAB
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = situation
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					title = Situation: Landed
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					title = Experiment: Temperature Scan
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = temperatureScanSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						title = Recovery: Recover
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+			PARAM
+			{
+				name = CollectScienceCustom
+				id = CollectScience
+				state = Incomplete
+				disableOnStateChange = False
+				values = 2964,0,0,0,0
+				ContractIdentifier = FieldResearch.FS_KSC
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = False
+				targetBody = Kerbin
+				biome = KSC
+				situation = SrfLanded
+				experiment = temperatureScan
+				recoveryMethod = Ideal
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = biome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					title = Location: KSC
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = situation
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					title = Situation: Landed
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					title = Experiment: Temperature Scan
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = temperatureScanSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						title = Recovery: Recover
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+			PARAM
+			{
+				name = CollectScienceCustom
+				id = CollectScience
+				state = Incomplete
+				disableOnStateChange = False
+				values = 2937,0,0,0,0
+				ContractIdentifier = FieldResearch.FS_KSC
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = False
+				targetBody = Kerbin
+				biome = MissionControl
+				situation = SrfLanded
+				experiment = barometerScan
+				recoveryMethod = Ideal
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = biome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					title = Location: KSC’s Mission Control
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = situation
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					title = Situation: Landed
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = experiment
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					title = Experiment: Atmospheric Pressure Scan
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = barometerScanSubject
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						title = 
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = recovery
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						title = Recovery: Recover
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = 4bc7610f-ca02-43ce-bdb4-931ee25c3117
+			type = ConfiguredContract
+			prestige = 1
+			seed = 1822693754
+			state = Offered
+			viewed = Unseen
+			agent = Kerbal Academy
+			agentName = Kerbal Academy
+			deadlineType = None
+			expiryType = Floating
+			ignoresWeight = True
+			values = 112080,0,-50000,0,-50000,0,0,0,132875.869646343,0,0,0
+			subtype = KerbalAcademyAdvancedPiloting
+			title = Kerbal Academy: Advanced Piloting
+			description = It seems that Jebediah Kerman is ready to improve their piloting skills. Complete the course and they will advance a level.
+			synopsis = Complete the training course with Jebediah Kerman.
+			completedMessage = Congratulations, Jebediah Kerman is feeling more experienced already.
+			notes = The parameters must be completed in order.
+			hash = 1197269559
+			targetBody = Kerbin
+			UNIQUE_DATA
+			{
+				trainee = Kerbal:Jebediah Kerman
+			}
+			BEHAVIOUR
+			{
+				type = ContractConfigurator.Behaviour.AwardExperience
+				kerbal = Jebediah Kerman
+				experience = 6
+				awardImmediately = False
+			}
+			PARAM
+			{
+				name = HasCrew
+				id = HasCrew
+				state = Incomplete
+				disableOnStateChange = False
+				values = 0,0,0,0,0
+				ContractIdentifier = KerbalAcademy.KerbalAcademyAdvancedPiloting
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = True
+				minCrew = 0
+				maxCrew = 2147483647
+				minExperience = 0
+				maxExperience = 5
+				crewOnly = False
+				KERBAL
+				{
+					name = Jebediah Kerman
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					title = Jebediah Kerman: On board
+					notes = 
+					completedMessage = 
+				}
+			}
+			PARAM
+			{
+				name = OrbitParameter
+				id = Orbit
+				state = Incomplete
+				disableOnStateChange = False
+				values = 0,0,0,0,0
+				ContractIdentifier = KerbalAcademy.KerbalAcademyAdvancedPiloting
+				title = Reach an equatorial orbit.
+				notes = 
+				completedMessage = 
+				completeInSequence = True
+				allowStateReset = False
+				situation = ORBITING
+				targetBody = Kerbin
+				minAltitude = 0
+				minApoapsis = 0
+				minPeriapsis = 0
+				minEccentricity = 0
+				minInclination = 0
+				maxInclination = 5
+				minArgumentOfPeriapsis = 0
+				maxArgumentOfPeriapsis = 360
+				minPeriod = 0
+				displayNotes = False
+				PARAM
+				{
+					name = ParameterDelegate`1
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					title = Destination: Kerbin
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					title = Situation: Orbit
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					title = Inclination: Below 5.0°
+					notes = 
+					completedMessage = 
+				}
+			}
+			PARAM
+			{
+				name = OrbitParameter
+				id = Orbit
+				state = Incomplete
+				disableOnStateChange = False
+				values = 0,0,0,0,0
+				ContractIdentifier = KerbalAcademy.KerbalAcademyAdvancedPiloting
+				title = Move to an inclined orbit by burning normal/anti-normal.
+				notes = 
+				completedMessage = 
+				completeInSequence = True
+				allowStateReset = False
+				situation = ORBITING
+				targetBody = Kerbin
+				minAltitude = 0
+				minApoapsis = 0
+				minPeriapsis = 0
+				minEccentricity = 0
+				minInclination = 45
+				maxInclination = 180
+				minArgumentOfPeriapsis = 0
+				maxArgumentOfPeriapsis = 360
+				minPeriod = 0
+				displayNotes = False
+				PARAM
+				{
+					name = ParameterDelegate`1
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					title = Destination: Kerbin
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					title = Situation: Orbit
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					title = Inclination: Above 45.0°
+					notes = 
+					completedMessage = 
 				}
 			}
 		}
@@ -3636,11 +6493,1880 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.12.5
-		UT = 2541.4882379134206
+		UT = 20800.629646343124
 		activeVessel = 0
 		mapViewFiltering = -1026
 		commNetUIModeTracking = Network
 		commNetUIModeFlight = Path
+		VESSEL
+		{
+			pid = 10535d28d30f439d959d1ebe3eb15d61
+			persistentId = 2999000070
+			name = Untitled Space Craft Debris
+			type = Debris
+			sit = ORBITING
+			landed = False
+			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
+			vesselSpawning = True
+			launchedFrom = LaunchPad
+			landedAt = 
+			displaylandedAt = 
+			splashed = False
+			met = 20.899999999980992
+			lct = 2902.1482379130925
+			lastUT = 2923.0482379130735
+			distanceTraveled = 48002.002153866611
+			root = 0
+			lat = -0.26163798622601092
+			lon = -133.63611178984786
+			alt = 88416.295824943576
+			hgt = 88416.2969
+			nrm = -0.283624113,-0.402007222,-0.870601892
+			rot = -0.546402991,-0.255828768,-0.770078421,-0.20730342
+			CoM = -2.455711E-05,-3.98530006,3.21864973E-05
+			stg = 2
+			prst = False
+			ref = 0
+			ctrl = False
+			PQSMin = 2
+			PQSMax = 10
+			GroupOverride = 0
+			OverrideDefault = False,False,False,False
+			OverrideActionControl = 0,0,0,0
+			OverrideAxisControl = 0,0,0,0
+			OverrideGroupNames = ,,,
+			altDispState = DEFAULT
+			cPch = 0
+			cHdg = 0
+			cMod = -1
+			ORBIT
+			{
+				SMA = 839244.65842091001
+				ECC = 0.18293698507091868
+				INC = 4.8044776093075336
+				LPE = 170.18557648554392
+				LAN = 182.08454799843915
+				MNA = 0.12312207735083226
+				EPH = 2910.5282379130849
+				REF = 1
+				IDENT = Squad/Kerbin
+			}
+			PART
+			{
+				name = Decoupler.1
+				cid = 4293049414
+				uid = 3023552456
+				mid = 187605710
+				persistentId = 1638467989
+				launchID = 12
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 1
+				resPri = 0
+				dstg = 1
+				sqor = 1
+				sepI = 1
+				sidx = 1
+				attm = 0
+				sameVesselCollision = False
+				srfN = , -1
+				attN = top, -1
+				attN = bottom, 1
+				mass = 0.0399999991
+				shielded = False
+				temp = 413.20216651327928
+				tempExt = 410.71707718919578
+				tempExtUnexp = 4
+				staticPressureAtm = 0
+				expt = 0.5
+				state = 1
+				PreFailState = 0
+				attached = False
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = Decoupler.1
+				modCost = 0
+				modMass = 0
+				moduleVariantName = Basic
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDecouple
+					isEnabled = True
+					ejectionForcePercent = 100
+					isDecoupled = True
+					stagingEnabled = False
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						DecoupleAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleToggleCrossfeed
+					isEnabled = True
+					crossfeedStatus = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						EnableAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						DisableAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTestSubject
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModulePartVariants
+					isEnabled = True
+					useVariantMass = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = solidBooster1-1
+				cid = 4293048872
+				uid = 612176099
+				mid = 187605710
+				persistentId = 883051091
+				launchID = 12
+				parent = 0
+				position = 0,-3.9700002670288086,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 2
+				resPri = 0
+				dstg = 2
+				sqor = 2
+				sepI = 1
+				sidx = 0
+				attm = 0
+				sameVesselCollision = False
+				srfN = srfAttach, -1
+				attN = bottom, -1
+				attN = top, 0
+				mass = 1.5
+				shielded = False
+				temp = 415.54488118636033
+				tempExt = 411.19563695486539
+				tempExtUnexp = 4
+				staticPressureAtm = 0
+				expt = 0.5
+				state = 1
+				PreFailState = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = solidBooster1-1
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleEnginesFX
+					isEnabled = True
+					independentThrottle = False
+					independentThrottlePercentage = 0
+					staged = True
+					flameout = False
+					EngineIgnited = True
+					engineShutdown = False
+					currentThrottle = 1
+					thrustPercentage = 100
+					manuallyOverridden = False
+					includeinDVCalcs = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						OnAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						ShutdownAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						ActivateAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						ToggleThrottle
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+					}
+					AXISGROUPS
+					{
+						independentThrottlePercentage
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+							overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+						}
+						thrustPercentage
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+							overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FXModuleAnimateThrottle
+					isEnabled = True
+					animState = 0.440670311
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTestSubject
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleSurfaceFX
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleWaterfallFX
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = SolidFuel
+					amount = 611.88059028984969
+					maxAmount = 820
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = basicFin
+				cid = 4293047980
+				uid = 4027569182
+				mid = 187605710
+				persistentId = 1053411237
+				launchID = 12
+				parent = 1
+				position = 5.2778233339267899E-08,-7.0933523178100586,-0.60371261835098267
+				rotation = 5.64854901E-08,0.707106829,-5.64854901E-08,-0.707106829
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 2
+				resPri = 0
+				dstg = 2
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 3
+				sym = 4
+				sym = 5
+				sym = 6
+				sym = 7
+				sym = 8
+				sym = 9
+				srfN = srfAttach, 1,Surface_Attach_Collider
+				mass = 0.00999999978
+				shielded = False
+				temp = 374.66645839221059
+				tempExt = 392.00210468944647
+				tempExtUnexp = 4
+				staticPressureAtm = 0
+				expt = 0.100000001
+				state = 1
+				PreFailState = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = basicFin
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleLiftingSurface
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = basicFin
+				cid = 4293047230
+				uid = 3659002123
+				mid = 187605710
+				persistentId = 1370763461
+				launchID = 12
+				parent = 1
+				position = -0.42688927054405212,-7.0933523178100586,-0.42688930034637451
+				rotation = 3.05697228E-08,0.382683426,-7.380185E-08,-0.923879564
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 2
+				resPri = 0
+				dstg = 2
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 2
+				sym = 4
+				sym = 5
+				sym = 6
+				sym = 7
+				sym = 8
+				sym = 9
+				srfN = srfAttach, 1,Surface_Attach_Collider
+				mass = 0.00999999978
+				shielded = False
+				temp = 374.6819326284205
+				tempExt = 392.0106237598315
+				tempExtUnexp = 4
+				staticPressureAtm = 0
+				expt = 0.100000001
+				state = 1
+				PreFailState = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = basicFin
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleLiftingSurface
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = basicFin
+				cid = 4293047184
+				uid = 158465662
+				mid = 187605710
+				persistentId = 1605506890
+				launchID = 12
+				parent = 1
+				position = -0.60371255874633789,-7.0933523178100586,-8.8762305949785514E-08
+				rotation = 0,0,-7.98825468E-08,-1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 2
+				resPri = 0
+				dstg = 2
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 2
+				sym = 3
+				sym = 5
+				sym = 6
+				sym = 7
+				sym = 8
+				sym = 9
+				srfN = srfAttach, 1,Surface_Attach_Collider
+				mass = 0.00999999978
+				shielded = False
+				temp = 374.56054936793532
+				tempExt = 391.5888971443909
+				tempExtUnexp = 4
+				staticPressureAtm = 0
+				expt = 0.100000001
+				state = 1
+				PreFailState = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = basicFin
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleLiftingSurface
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = basicFin
+				cid = 4293047138
+				uid = 2649785838
+				mid = 187605710
+				persistentId = 388635400
+				launchID = 12
+				parent = 1
+				position = -0.4268893301486969,-7.0933523178100586,0.42688921093940735
+				rotation = -3.05697263E-08,-0.382683456,-7.380185E-08,-0.923879564
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 2
+				resPri = 0
+				dstg = 2
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 2
+				sym = 3
+				sym = 4
+				sym = 6
+				sym = 7
+				sym = 8
+				sym = 9
+				srfN = srfAttach, 1,Surface_Attach_Collider
+				mass = 0.00999999978
+				shielded = False
+				temp = 374.58569437177101
+				tempExt = 391.61608254528937
+				tempExtUnexp = 4
+				staticPressureAtm = 0
+				expt = 0.100000001
+				state = 1
+				PreFailState = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = basicFin
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleLiftingSurface
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = basicFin
+				cid = 4293047092
+				uid = 501791869
+				mid = 187605710
+				persistentId = 3778875185
+				launchID = 12
+				parent = 1
+				position = 9.4181593405205655E-18,-7.0933523178100586,0.60371261835098267
+				rotation = -5.64854936E-08,-0.707106888,-5.64854865E-08,-0.707106769
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 2
+				resPri = 0
+				dstg = 2
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 2
+				sym = 3
+				sym = 4
+				sym = 5
+				sym = 7
+				sym = 8
+				sym = 9
+				srfN = srfAttach, 1,Surface_Attach_Collider
+				mass = 0.00999999978
+				shielded = False
+				temp = 374.55271536237802
+				tempExt = 391.58532316419081
+				tempExtUnexp = 4
+				staticPressureAtm = 0
+				expt = 0.100000001
+				state = 1
+				PreFailState = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = basicFin
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleLiftingSurface
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = basicFin
+				cid = 4293047046
+				uid = 2476723506
+				mid = 187605710
+				persistentId = 2168538624
+				launchID = 12
+				parent = 1
+				position = 0.42688930034637451,-7.0933523178100586,0.42688927054405212
+				rotation = -7.380185E-08,-0.923879623,-3.05697192E-08,-0.382683367
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 2
+				resPri = 0
+				dstg = 2
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 2
+				sym = 3
+				sym = 4
+				sym = 5
+				sym = 6
+				sym = 8
+				sym = 9
+				srfN = srfAttach, 1,Surface_Attach_Collider
+				mass = 0.00999999978
+				shielded = False
+				temp = 374.55503236070672
+				tempExt = 391.5863788600355
+				tempExtUnexp = 4
+				staticPressureAtm = 0
+				expt = 0.100000001
+				state = 1
+				PreFailState = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = basicFin
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleLiftingSurface
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = basicFin
+				cid = 4293047000
+				uid = 439243290
+				mid = 187605710
+				persistentId = 2511577848
+				launchID = 12
+				parent = 1
+				position = 0.60371255874633789,-7.0933523178100586,1.6794153623322927E-08
+				rotation = -7.98825468E-08,-1,0,0
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 2
+				resPri = 0
+				dstg = 2
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 2
+				sym = 3
+				sym = 4
+				sym = 5
+				sym = 6
+				sym = 7
+				sym = 9
+				srfN = srfAttach, 1,Surface_Attach_Collider
+				mass = 0.00999999978
+				shielded = False
+				temp = 374.55839888888625
+				tempExt = 391.58790893523155
+				tempExtUnexp = 4
+				staticPressureAtm = 0
+				expt = 0.100000001
+				state = 1
+				PreFailState = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = basicFin
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleLiftingSurface
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = basicFin
+				cid = 4293046954
+				uid = 4210395589
+				mid = 187605710
+				persistentId = 3321541427
+				launchID = 12
+				parent = 1
+				position = 0.42688921093940735,-7.0933523178100586,-0.42688938975334167
+				rotation = -7.38018429E-08,-0.923879504,3.05697405E-08,0.382683605
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 2
+				resPri = 0
+				dstg = 2
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 2
+				sym = 3
+				sym = 4
+				sym = 5
+				sym = 6
+				sym = 7
+				sym = 8
+				srfN = srfAttach, 1,Surface_Attach_Collider
+				mass = 0.00999999978
+				shielded = False
+				temp = 374.55595683742609
+				tempExt = 391.58680237564118
+				tempExtUnexp = 4
+				staticPressureAtm = 0
+				expt = 0.100000001
+				state = 1
+				PreFailState = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = basicFin
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleLiftingSurface
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			ACTIONGROUPS
+			{
+				Stage = True, 2899.70823791309
+				Gear = False, 0
+				Light = False, 0
+				RCS = False, 0
+				SAS = False, 0
+				Brakes = False, 0
+				Abort = False, 0
+				Custom01 = False, 0
+				Custom02 = False, 0
+				Custom03 = False, 0
+				Custom04 = False, 0
+				Custom05 = False, 0
+				Custom06 = False, 0
+				Custom07 = False, 0
+				Custom08 = False, 0
+				Custom09 = False, 0
+				Custom10 = False, 0
+			}
+			DISCOVERY
+			{
+				state = -1
+				lastObservedTime = 0
+				lifetime = Infinity
+				refTime = Infinity
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+				pitch = 0
+				yaw = 0
+				roll = 0
+				trimPitch = 0
+				trimYaw = 0
+				trimRoll = 0
+				mainThrottle = 0
+			}
+			VESSELMODULES
+			{
+				ModularFlightIntegrator
+				{
+				}
+				AxisGroupsModule
+				{
+				}
+				SuspensionLoadBalancer
+				{
+				}
+				VesselModuleSave
+				{
+				}
+			}
+		}
+		VESSEL
+		{
+			pid = f49adeb766934ec5aa03b8a785745a76
+			persistentId = 3743928717
+			name = Untitled Space Craft Debris
+			type = Debris
+			sit = LANDED
+			landed = True
+			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
+			vesselSpawning = True
+			launchedFrom = LaunchPad
+			landedAt = 
+			displaylandedAt = 
+			splashed = False
+			met = 1385.0144824518175
+			lct = 19393.77516389083
+			lastUT = 20778.809646342648
+			distanceTraveled = 1.2867736267776397
+			root = 0
+			lat = -0.13369897736208539
+			lon = -74.960692994360784
+			alt = 86.943412176566198
+			hgt = 86.9434128
+			nrm = -0.120166615,-0.213396743,-0.969547272
+			rot = 0.119359285,-0.210552827,-0.230019629,0.942609072
+			CoM = -2.67289579E-06,-0.0371882245,-0.112366281
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			PQSMin = 2
+			PQSMax = 10
+			GroupOverride = 0
+			OverrideDefault = False,False,False,False
+			OverrideActionControl = 0,0,0,0
+			OverrideAxisControl = 0,0,0,0
+			OverrideGroupNames = ,,,
+			altDispState = DEFAULT
+			cPch = 0
+			cHdg = 0
+			cMod = 0
+			ORBIT
+			{
+				SMA = 0
+				ECC = 1
+				INC = 90.133700650066061
+				LPE = 90
+				LAN = 272.40646980853802
+				MNA = 0
+				EPH = 20793.229646342963
+				REF = 1
+				IDENT = Squad/Kerbin
+			}
+			PART
+			{
+				name = parachuteRadial
+				cid = 4294262792
+				uid = 1169414624
+				mid = 288293542
+				persistentId = 1976800060
+				launchID = 13
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = 0
+				sepI = -1
+				sidx = 0
+				attm = 1
+				sameVesselCollision = False
+				srfN = srfAttach, -1,COL3
+				mass = 0.100000001
+				shielded = False
+				temp = 314.02859739450679
+				tempExt = 314.63403137688141
+				tempExtUnexp = 314.63358974277168
+				staticPressureAtm = 0.98718221058764333
+				expt = 0.5
+				state = 1
+				PreFailState = 0
+				attached = False
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = parachuteRadial (Untitled Space Craft Debris)
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleParachute
+					isEnabled = True
+					persistentState = CUT
+					animTime = 1
+					minAirPressureToOpen = 0.0399999991
+					deployAltitude = 1000
+					spreadAngle = 7
+					automateSafeDeploy = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						CutAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTestSubject
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDragModifier
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDragModifier
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			ACTIONGROUPS
+			{
+				Stage = False, 19197.0773220897
+				Gear = False, 0
+				Light = False, 0
+				RCS = False, 0
+				SAS = False, 19177.49944123
+				Brakes = False, 0
+				Abort = False, 0
+				Custom01 = False, 0
+				Custom02 = False, 0
+				Custom03 = False, 0
+				Custom04 = False, 0
+				Custom05 = False, 0
+				Custom06 = False, 0
+				Custom07 = False, 0
+				Custom08 = False, 0
+				Custom09 = False, 0
+				Custom10 = False, 0
+			}
+			DISCOVERY
+			{
+				state = -1
+				lastObservedTime = 0
+				lifetime = Infinity
+				refTime = Infinity
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+				pitch = 0
+				yaw = 0
+				roll = 0
+				trimPitch = 0
+				trimYaw = 0
+				trimRoll = 0
+				mainThrottle = 0
+			}
+			VESSELMODULES
+			{
+				ModularFlightIntegrator
+				{
+				}
+				AxisGroupsModule
+				{
+				}
+				SuspensionLoadBalancer
+				{
+				}
+				VesselModuleSave
+				{
+				}
+			}
+		}
+		VESSEL
+		{
+			pid = 2602d0a10bd8426a85d76fcc558f5941
+			persistentId = 3687761859
+			name = Untitled Space Craft Debris
+			type = Debris
+			sit = LANDED
+			landed = True
+			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
+			vesselSpawning = True
+			launchedFrom = LaunchPad
+			landedAt = 
+			displaylandedAt = 
+			splashed = False
+			met = 1385.0144824518175
+			lct = 19393.77516389083
+			lastUT = 20778.809646342648
+			distanceTraveled = 0.85043679136177175
+			root = 0
+			lat = -0.13374781724197493
+			lon = -74.960644292822209
+			alt = 86.990609400789253
+			hgt = 0.0181169361
+			nrm = 0.475455463,-1.51544809E-05,-0.879739702
+			rot = -0.165993199,-0.0261907987,0.181588441,-0.968909621
+			CoM = -6.65299594E-05,-0.0371944755,-0.112191185
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			PQSMin = 2
+			PQSMax = 10
+			GroupOverride = 0
+			OverrideDefault = False,False,False,False
+			OverrideActionControl = 0,0,0,0
+			OverrideAxisControl = 0,0,0,0
+			OverrideGroupNames = ,,,
+			altDispState = DEFAULT
+			cPch = 0
+			cHdg = 0
+			cMod = 0
+			ORBIT
+			{
+				SMA = 300043.55040721316
+				ECC = 0.99999999999999989
+				INC = 90.133747364350683
+				LPE = 90
+				LAN = 272.40651384371733
+				MNA = 3.1415926207170166
+				EPH = 20793.229646342963
+				REF = 1
+				IDENT = Squad/Kerbin
+			}
+			PART
+			{
+				name = parachuteRadial
+				cid = 4294262516
+				uid = 154809102
+				mid = 288293542
+				persistentId = 286234085
+				launchID = 13
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = 0
+				sepI = -1
+				sidx = 0
+				attm = 1
+				sameVesselCollision = False
+				srfN = srfAttach, -1,COL3
+				mass = 0.100000001
+				shielded = False
+				temp = 314.12236568384225
+				tempExt = 314.73883353723386
+				tempExtUnexp = 314.73838995547305
+				staticPressureAtm = 0.98717528333082738
+				expt = 0.5
+				state = 1
+				PreFailState = 0
+				attached = False
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = parachuteRadial (Untitled Space Craft Debris)
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleParachute
+					isEnabled = True
+					persistentState = CUT
+					animTime = 1
+					minAirPressureToOpen = 0.0399999991
+					deployAltitude = 1000
+					spreadAngle = 7
+					automateSafeDeploy = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						CutAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTestSubject
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDragModifier
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDragModifier
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			ACTIONGROUPS
+			{
+				Stage = False, 19197.0773220897
+				Gear = False, 0
+				Light = False, 0
+				RCS = False, 0
+				SAS = False, 19177.49944123
+				Brakes = False, 0
+				Abort = False, 0
+				Custom01 = False, 0
+				Custom02 = False, 0
+				Custom03 = False, 0
+				Custom04 = False, 0
+				Custom05 = False, 0
+				Custom06 = False, 0
+				Custom07 = False, 0
+				Custom08 = False, 0
+				Custom09 = False, 0
+				Custom10 = False, 0
+			}
+			DISCOVERY
+			{
+				state = -1
+				lastObservedTime = 0
+				lifetime = Infinity
+				refTime = Infinity
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+				pitch = 0
+				yaw = 0
+				roll = 0
+				trimPitch = 0
+				trimYaw = 0
+				trimRoll = 0
+				mainThrottle = 0
+			}
+			VESSELMODULES
+			{
+				ModularFlightIntegrator
+				{
+				}
+				AxisGroupsModule
+				{
+				}
+				SuspensionLoadBalancer
+				{
+				}
+				VesselModuleSave
+				{
+				}
+			}
+		}
 	}
 	LoaderInfo
 	{
@@ -3820,7 +8546,7 @@ GAME
 						PART
 						{
 							name = evaChute
-							cid = 4294866434
+							cid = 4294866426
 							uid = 0
 							mid = 0
 							persistentId = 0
@@ -3911,7 +8637,7 @@ GAME
 						PART
 						{
 							name = evaJetpack
-							cid = 4294866528
+							cid = 4294866520
 							uid = 0
 							mid = 0
 							persistentId = 0
@@ -4007,7 +8733,7 @@ GAME
 			}
 			CAREER_LOG
 			{
-				flight = 11
+				flight = 17
 				0 = ExitVessel,Kerbin
 				0 = BoardVessel,Kerbin
 				0 = Flight,Kerbin
@@ -4060,10 +8786,33 @@ GAME
 				10 = Suborbit,Kerbin
 				10 = Land,Kerbin
 				10 = Recover
+				11 = Orbit,Kerbin
+				11 = Suborbit,Kerbin
+				11 = Flight,Kerbin
+				11 = Land,Kerbin
+				11 = Recover
+				12 = Flight,Kerbin
+				12 = Suborbit,Kerbin
+				12 = Land,Kerbin
+				12 = Recover
+				13 = Flight,Kerbin
+				13 = Land,Kerbin
+				13 = Recover
+				14 = Flight,Kerbin
+				14 = Land,Kerbin
+				14 = Recover
+				15 = Flight,Kerbin
+				15 = Land,Kerbin
+				15 = ExitVessel,Kerbin
+				15 = BoardVessel,Kerbin
+				15 = Recover
+				16 = Flight,Kerbin
+				16 = Land,Kerbin
+				16 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 11
+				flight = 17
 			}
 		}
 		KERBAL
@@ -4784,7 +9533,7 @@ GAME
 		MESSAGE
 		{
 			title = Contract Complete
-			message = <b>Reach for the Stars</b>~n~nHuzzah! There is no such thing as the final frontier.~n~n<b><color=#8BED8B>Completion Rewards:</color></b> ~n<color=#B4D455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  26,400   </color>~n<color=#6DCFF6><sprite="CurrencySpriteAsset" name="Science" tint=1> 2   </color>~n<color=#E0D503><sprite="CurrencySpriteAsset" name="Reputation" tint=1> 9   </color>~n~n
+			message = <b>Perform another Mystery Goo™ Observation from Kerbin's upper atmosphere</b>~n~nGreat, let's hope that completes our knowledge of the topic.~n~n<b><color=#8BED8B>Completion Rewards:</color></b> ~n<color=#B4D455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  5,468   </color>~n~n
 			color = 2
 			icon = 3
 			read = False
@@ -4792,17 +9541,9 @@ GAME
 		MESSAGE
 		{
 			title = Contract Complete
-			message = <b>Do Some Science!</b>~n~nHuzzah! There is no such thing as the final frontier.~n~n<b><color=#8BED8B>Completion Rewards:</color></b> ~n<color=#B4D455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  6,400   </color>~n<color=#6DCFF6><sprite="CurrencySpriteAsset" name="Science" tint=1> 2   </color>~n<color=#E0D503><sprite="CurrencySpriteAsset" name="Reputation" tint=1> 8   </color>~n~n
+			message = <b>Perform another Materials Study from Kerbin's upper atmosphere</b>~n~nGreat, let's hope that completes our knowledge of the topic.~n~n<b><color=#8BED8B>Completion Rewards:</color></b> ~n<color=#B4D455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  5,049   </color>~n~n
 			color = 2
 			icon = 3
-			read = False
-		}
-		MESSAGE
-		{
-			title = World First Milestones
-			message = The recent accomplishments of our space program have attracted contributions from numerous organizations!~n~nWe have performed an EVA test at home.~n<color=#b4d455><sprite="CurrencySpriteAsset" name="Funds" tint=1> 1,280 </color><color=#e0d503><sprite="CurrencySpriteAsset" name="Reputation" tint=1> 1 </color>~n~n We have broken a speed record of 25m/s.~n <color=#b4d455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  3,840 </color><color=#e0d503><sprite="CurrencySpriteAsset" name="Reputation" tint=1> 2 </color>~n~n We have launched our first vessel.~n <color=#b4d455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  640 </color>~n~n We have broken a speed record of 80m/s.~n <color=#b4d455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  3,840 </color><color=#e0d503><sprite="CurrencySpriteAsset" name="Reputation" tint=1> 2 </color>~n~n We have broken a speed record of 250m/s.~n <color=#b4d455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  3,840 </color><color=#6dcff6><sprite="CurrencySpriteAsset" name="Science" tint=1> 1 </color><color=#e0d503><sprite="CurrencySpriteAsset" name="Reputation" tint=1> 2 </color>~n~n We have broken an altitude record of 500m.~n <color=#b4d455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  3,840 </color><color=#e0d503><sprite="CurrencySpriteAsset" name="Reputation" tint=1> 2 </color>~n~n We have broken a land distance record of 1,000m.~n <color=#b4d455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  3,840 </color><color=#e0d503><sprite="CurrencySpriteAsset" name="Reputation" tint=1> 2 </color>~n~n We have broken a land distance record of 3,000m.~n <color=#b4d455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  3,840 </color><color=#e0d503><sprite="CurrencySpriteAsset" name="Reputation" tint=1> 2 </color>~n~n We have splashed into the ocean.~n <color=#b4d455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  1,920 </color><color=#e0d503><sprite="CurrencySpriteAsset" name="Reputation" tint=1> 1 </color>~n~n We have recovered our first crew from a mission.~n <color=#b4d455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  640 </color>~n~n We have performed the first one of our experiments at home.~n <color=#b4d455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  1,280 </color><color=#e0d503><sprite="CurrencySpriteAsset" name="Reputation" tint=1> 1 </color>~n~n We have broken an altitude record of 2,000m.~n <color=#b4d455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  3,840 </color><color=#e0d503><sprite="CurrencySpriteAsset" name="Reputation" tint=1> 2 </color>~n~n We have returned to the surface.~n <color=#b4d455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  640 </color>~n~n We have broken an altitude record of 7,000m.~n <color=#b4d455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  3,840 </color><color=#6dcff6><sprite="CurrencySpriteAsset" name="Science" tint=1> 1 </color><color=#e0d503><sprite="CurrencySpriteAsset" name="Reputation" tint=1> 2 </color>~n~n We have broken a speed record of 790m/s.~n <color=#b4d455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  3,840 </color><color=#e0d503><sprite="CurrencySpriteAsset" name="Reputation" tint=1> 2 </color>~n~n We have broken an altitude record of 22km.~n <color=#b4d455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  3,840 </color><color=#e0d503><sprite="CurrencySpriteAsset" name="Reputation" tint=1> 2 </color>~n~n We have broken an altitude record of 70km.~n <color=#b4d455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  3,840 </color><color=#6dcff6><sprite="CurrencySpriteAsset" name="Science" tint=1> 1 </color><color=#e0d503><sprite="CurrencySpriteAsset" name="Reputation" tint=1> 2 </color>~n~n We have reached space.~n <color=#b4d455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  6,400 </color><color=#6dcff6><sprite="CurrencySpriteAsset" name="Science" tint=1> 1 </color><color=#e0d503><sprite="CurrencySpriteAsset" name="Reputation" tint=1> 3 </color>~n
-			color = 3
-			icon = 6
 			read = False
 		}
 	}
@@ -4810,6 +9551,15 @@ GAME
 	{
 		VesselModuleSaveFrameworkVesselModuleSave
 		{
+			10535d28-d30f-439d-959d-1ebe3eb15d61
+			{
+			}
+			f49adeb7-6693-4ec5-aa03-b8a785745a76
+			{
+			}
+			2602d0a1-0bd8-426a-85d7-6fcc558f5941
+			{
+			}
 		}
 	}
 }
