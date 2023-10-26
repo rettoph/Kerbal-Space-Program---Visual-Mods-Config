@@ -4,5 +4,5 @@
 !*/**/*.cfg
 !CKAN/*.ckan
 !GameData\SRB-Plumes\README.MD
-!saves/Career/*
+!saves/Career/persistent.*
 !settings.cfg
