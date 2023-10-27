@@ -9,4 +9,5 @@ My preferred configuration for a collection of Visual and QoL mods. No Gameplay 
 - Ensure all CKAN mods are installed
 - Install [True volumetric clouds release 3](https://www.patreon.com/posts/true-volumetric-87982960)
 - Install [Textures Unlimited Recolour Depot - Stock Recolour](https://forum.kerbalspaceprogram.com/topic/174188-112x-textures-unlimited-recolour-depot/)
+- Install [Adjustable Mod Panel (KAMP) by Morse](https://www.curseforge.com/kerbal/ksp-mods/adjustablemodpanel)
 
