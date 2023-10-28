@@ -70,5 +70,20 @@
     <bool name="hashNeeded14">0</bool>
     <int name="scenes14">6</int>
     <bool name="pinned14">0</bool>
-    <int name="count">14</int>
+    <string name="module15">PlanetShine</string>
+    <string name="method15">&lt;UpdateToolbarStock&gt;b__10_0</string>
+    <bool name="hashNeeded15">0</bool>
+    <int name="scenes15">2</int>
+    <bool name="pinned15">0</bool>
+    <string name="module16">EngineLight</string>
+    <string name="method16">EnglineLightBtn</string>
+    <bool name="hashNeeded16">0</bool>
+    <int name="scenes16">0</int>
+    <bool name="pinned16">0</bool>
+    <string name="module17">Waterfall</string>
+    <string name="method17">OnToolbarButtonToggle</string>
+    <bool name="hashNeeded17">0</bool>
+    <int name="scenes17">0</int>
+    <bool name="pinned17">0</bool>
+    <int name="count">17</int>
 </config>

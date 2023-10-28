@@ -6,7 +6,7 @@
     "author": [
         "Anthony"
     ],
-    "version": "2023.10.27.05.34.43",
+    "version": "2023.10.28.07.34.03",
     "ksp_version_min": "1.12.5",
     "ksp_version_max": "1.12.5",
     "license": [
@@ -166,6 +166,6 @@
             "version": "6.0.2"
         }
     ],
-    "release_date": "2023-10-26T23:34:43.9834013-06:00",
+    "release_date": "2023-10-28T13:34:03.0392591-06:00",
     "kind": "metapackage"
 }
