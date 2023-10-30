@@ -85,5 +85,15 @@
     <bool name="hashNeeded17">0</bool>
     <int name="scenes17">0</int>
     <bool name="pinned17">0</bool>
-    <int name="count">17</int>
+    <string name="module18">BetterTimeWarp_NS</string>
+    <string name="method18">betterTimeWarpButton</string>
+    <bool name="hashNeeded18">0</bool>
+    <int name="scenes18">39</int>
+    <bool name="pinned18">0</bool>
+    <string name="module19">Trajectories_NS</string>
+    <string name="method19">TrajectoriesButton</string>
+    <bool name="hashNeeded19">0</bool>
+    <int name="scenes19">6</int>
+    <bool name="pinned19">0</bool>
+    <int name="count">19</int>
 </config>
