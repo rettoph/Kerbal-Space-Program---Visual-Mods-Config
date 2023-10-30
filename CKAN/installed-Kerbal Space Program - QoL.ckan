@@ -6,7 +6,7 @@
     "author": [
         "Anthony"
     ],
-    "version": "2023.10.28.11.50.31",
+    "version": "2023.10.30.07.40.54",
     "ksp_version_min": "1.12.5",
     "ksp_version_max": "1.12.5",
     "license": [
@@ -20,6 +20,10 @@
         {
             "name": "BallisticFoxsNeutralTUFXProfile",
             "version": "V1.3"
+        },
+        {
+            "name": "BetterTimeWarpCont",
+            "version": "2.3.13"
         },
         {
             "name": "ClickThroughBlocker",
@@ -74,6 +78,10 @@
             "version": "2:release-1.12.1-191"
         },
         {
+            "name": "KSPCommunityFixes",
+            "version": "1.31.1"
+        },
+        {
             "name": "LessGrindyScience",
             "version": "1:1.0.0.1"
         },
@@ -110,24 +118,12 @@
             "version": "v1.3.0"
         },
         {
-            "name": "RealPlume",
-            "version": "2:v13.3.2"
-        },
-        {
-            "name": "RealPlume-StockConfigs",
-            "version": "v4.0.8"
-        },
-        {
             "name": "ResearchAdvancementDivision",
             "version": "1.2.1"
         },
         {
             "name": "Shabby",
             "version": "0.3.0.0"
-        },
-        {
-            "name": "SmokeScreen",
-            "version": "2.8.14.0"
         },
         {
             "name": "SpaceTuxLibrary",
@@ -150,6 +146,10 @@
             "version": "1.0.2"
         },
         {
+            "name": "Trajectories",
+            "version": "v2.4.5.2"
+        },
+        {
             "name": "TransferWindowPlannerFork",
             "version": "v1.9.1.0"
         },
@@ -166,6 +166,6 @@
             "version": "6.0.2"
         }
     ],
-    "release_date": "2023-10-28T17:50:31.1864882-06:00",
+    "release_date": "2023-10-30T13:40:54.656274-06:00",
     "kind": "metapackage"
 }

@@ -53,7 +53,7 @@
     <string name="module11">EVEManager</string>
     <string name="method11">OpenEditor</string>
     <bool name="hashNeeded11">0</bool>
-    <int name="scenes11">35</int>
+    <int name="scenes11">0</int>
     <bool name="pinned11">0</bool>
     <string name="module12">DistantObject</string>
     <string name="method12">onAppLauncherTrue</string>
@@ -73,7 +73,7 @@
     <string name="module15">PlanetShine</string>
     <string name="method15">&lt;UpdateToolbarStock&gt;b__10_0</string>
     <bool name="hashNeeded15">0</bool>
-    <int name="scenes15">2</int>
+    <int name="scenes15">0</int>
     <bool name="pinned15">0</bool>
     <string name="module16">EngineLight</string>
     <string name="method16">EnglineLightBtn</string>
@@ -88,12 +88,12 @@
     <string name="module18">BetterTimeWarp_NS</string>
     <string name="method18">betterTimeWarpButton</string>
     <bool name="hashNeeded18">0</bool>
-    <int name="scenes18">39</int>
+    <int name="scenes18">2</int>
     <bool name="pinned18">0</bool>
     <string name="module19">Trajectories_NS</string>
     <string name="method19">TrajectoriesButton</string>
     <bool name="hashNeeded19">0</bool>
-    <int name="scenes19">6</int>
+    <int name="scenes19">0</int>
     <bool name="pinned19">0</bool>
     <int name="count">19</int>
 </config>
