@@ -6,7 +6,7 @@
     "author": [
         "Anthony"
     ],
-    "version": "2023.10.31.05.40.14",
+    "version": "2023.10.31.08.00.24",
     "ksp_version_min": "1.12.5",
     "ksp_version_max": "1.12.5",
     "license": [
@@ -66,6 +66,10 @@
             "version": "1.6.3.4"
         },
         {
+            "name": "EnvironmentalVisualEnhancements",
+            "version": "3:1.11.7.1"
+        },
+        {
             "name": "Harmony2",
             "version": "2.2.1.0"
         },
@@ -118,6 +122,10 @@
             "version": "1.2.1"
         },
         {
+            "name": "Scatterer-config",
+            "version": "3:v0.0838"
+        },
+        {
             "name": "SpaceTuxLibrary",
             "version": "0.0.8.5"
         },
@@ -154,6 +162,6 @@
             "version": "6.0.2"
         }
     ],
-    "release_date": "2023-10-30T23:40:14.4282342-06:00",
+    "release_date": "2023-10-31T02:00:24.2080777-06:00",
     "kind": "metapackage"
 }
