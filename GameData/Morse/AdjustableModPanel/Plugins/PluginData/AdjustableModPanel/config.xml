@@ -18,7 +18,7 @@
     <string name="module4">Scatterer</string>
     <string name="method4">ShowToolbarGUI</string>
     <bool name="hashNeeded4">0</bool>
-    <int name="scenes4">-1</int>
+    <int name="scenes4">-64</int>
     <bool name="pinned4">0</bool>
     <string name="module5">TUFX</string>
     <string name="method5">configGuiEnable</string>
