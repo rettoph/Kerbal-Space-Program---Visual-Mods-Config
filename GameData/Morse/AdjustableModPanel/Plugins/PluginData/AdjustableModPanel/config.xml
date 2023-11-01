@@ -95,5 +95,10 @@
     <bool name="hashNeeded19">0</bool>
     <int name="scenes19">6</int>
     <bool name="pinned19">0</bool>
-    <int name="count">19</int>
+    <string name="module20">LazyPainter</string>
+    <string name="method20">ToggleGui</string>
+    <bool name="hashNeeded20">0</bool>
+    <int name="scenes20">26</int>
+    <bool name="pinned20">0</bool>
+    <int name="count">20</int>
 </config>
