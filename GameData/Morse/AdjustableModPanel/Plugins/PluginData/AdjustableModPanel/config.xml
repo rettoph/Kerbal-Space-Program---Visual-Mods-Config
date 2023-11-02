@@ -73,7 +73,7 @@
     <string name="module15">PlanetShine</string>
     <string name="method15">&lt;UpdateToolbarStock&gt;b__10_0</string>
     <bool name="hashNeeded15">0</bool>
-    <int name="scenes15">0</int>
+    <int name="scenes15">2</int>
     <bool name="pinned15">0</bool>
     <string name="module16">EngineLight</string>
     <string name="method16">EnglineLightBtn</string>
@@ -98,7 +98,7 @@
     <string name="module20">LazyPainter</string>
     <string name="method20">ToggleGui</string>
     <bool name="hashNeeded20">0</bool>
-    <int name="scenes20">26</int>
+    <int name="scenes20">24</int>
     <bool name="pinned20">0</bool>
     <string name="module21">Chatterer</string>
     <string name="method21">UIToggle</string>
