@@ -100,5 +100,10 @@
     <bool name="hashNeeded20">0</bool>
     <int name="scenes20">26</int>
     <bool name="pinned20">0</bool>
-    <int name="count">20</int>
+    <string name="module21">Chatterer</string>
+    <string name="method21">UIToggle</string>
+    <bool name="hashNeeded21">0</bool>
+    <int name="scenes21">6</int>
+    <bool name="pinned21">0</bool>
+    <int name="count">21</int>
 </config>

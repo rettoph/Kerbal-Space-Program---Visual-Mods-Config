@@ -6,7 +6,7 @@
     "author": [
         "Anthony"
     ],
-    "version": "2023.11.01.06.26.24",
+    "version": "2023.11.02.12.22.21",
     "ksp_version_min": "1.12.5",
     "ksp_version_max": "1.12.5",
     "license": [
@@ -20,6 +20,14 @@
         {
             "name": "BetterTimeWarpCont",
             "version": "2.3.13"
+        },
+        {
+            "name": "Chatterer",
+            "version": "0.9.99"
+        },
+        {
+            "name": "ChattererExtended",
+            "version": "0.6.2"
         },
         {
             "name": "ClickThroughBlocker",
@@ -84,6 +92,10 @@
         {
             "name": "KSPCommunityFixes",
             "version": "1.31.1"
+        },
+        {
+            "name": "LazyPainter",
+            "version": "v0.2.3"
         },
         {
             "name": "MagiCore",
@@ -182,6 +194,6 @@
             "version": "6.0.2"
         }
     ],
-    "release_date": "2023-11-01T12:26:24.3688828-06:00",
+    "release_date": "2023-11-01T18:22:21.2811774-06:00",
     "kind": "metapackage"
 }

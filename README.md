@@ -10,6 +10,5 @@ My preferred configuration for a collection of Visual and QoL mods. No Gameplay 
 - Install [True volumetric clouds release 3](https://www.patreon.com/posts/true-volumetric-87982960)
 - Install [Textures Unlimited Recolour Depot - Stock Recolour ](https://forum.kerbalspaceprogram.com/topic/174188-112x-textures-unlimited-recolour-depot/)
 - Install [TURD - Making History and Breaking Ground](https://github.com/OnlyLightMatters/TURD-MH-BG/releases)
-- Install [Lazy Painter](https://spacedock.info/mod/3415/Lazy%20Painter)
 - Install [Adjustable Mod Panel (KAMP) by Morse](https://www.curseforge.com/kerbal/ksp-mods/adjustablemodpanel)
 
