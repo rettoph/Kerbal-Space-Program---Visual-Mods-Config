@@ -105,5 +105,10 @@
     <bool name="hashNeeded21">0</bool>
     <int name="scenes21">6</int>
     <bool name="pinned21">0</bool>
-    <int name="count">21</int>
+    <string name="module22">TacStickyControls_NS</string>
+    <string name="method22">tacStikyControlsButton</string>
+    <bool name="hashNeeded22">0</bool>
+    <int name="scenes22">2</int>
+    <bool name="pinned22">0</bool>
+    <int name="count">22</int>
 </config>
