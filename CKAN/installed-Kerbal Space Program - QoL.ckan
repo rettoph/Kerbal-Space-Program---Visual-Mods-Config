@@ -6,7 +6,7 @@
     "author": [
         "Anthony"
     ],
-    "version": "2023.11.03.05.23.21",
+    "version": "2023.11.03.08.48.42",
     "ksp_version_min": "1.12.5",
     "ksp_version_max": "1.12.5",
     "license": [
@@ -154,6 +154,10 @@
             "version": "1.9.6.3"
         },
         {
+            "name": "StockWaterfallEffects",
+            "version": "0.7.0"
+        },
+        {
             "name": "TACStickyControls",
             "version": "0.4.4.1"
         },
@@ -190,10 +194,14 @@
             "version": "1.0.7.1"
         },
         {
+            "name": "Waterfall",
+            "version": "0.9.0"
+        },
+        {
             "name": "xScienceContinued",
             "version": "6.0.2"
         }
     ],
-    "release_date": "2023-11-02T23:23:21.9778801-06:00",
+    "release_date": "2023-11-03T14:48:42.4753934-06:00",
     "kind": "metapackage"
 }
