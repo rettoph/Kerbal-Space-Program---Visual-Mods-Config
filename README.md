@@ -11,4 +11,5 @@ My preferred configuration for a collection of Visual and QoL mods. No Gameplay 
 - Install [Textures Unlimited Recolour Depot - Stock Recolour ](https://forum.kerbalspaceprogram.com/topic/174188-112x-textures-unlimited-recolour-depot/)
 - Install [TURD - Making History and Breaking Ground](https://github.com/OnlyLightMatters/TURD-MH-BG/releases)
 - Install [Adjustable Mod Panel (KAMP) by Morse](https://www.curseforge.com/kerbal/ksp-mods/adjustablemodpanel)
+- Install [BetterKerbol v1.0.1](https://forum.kerbalspaceprogram.com/topic/207389-112x-kopernicus-betterkerbol-v101-a-kerbol-graphics-enhancement/)
 
