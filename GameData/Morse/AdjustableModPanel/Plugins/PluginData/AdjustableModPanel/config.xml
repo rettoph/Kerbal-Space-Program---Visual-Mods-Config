@@ -8,7 +8,7 @@
     <string name="module2">AdjustableModPanel</string>
     <string name="method2">OpenMainWindow</string>
     <bool name="hashNeeded2">0</bool>
-    <int name="scenes2">-127</int>
+    <int name="scenes2">-65</int>
     <bool name="pinned2">0</bool>
     <string name="module3">Kopernicus</string>
     <string name="method3">ShowToolbarGUI</string>
@@ -68,7 +68,7 @@
     <string name="module14">PlanetShine</string>
     <string name="method14">&lt;UpdateToolbarStock&gt;b__10_0</string>
     <bool name="hashNeeded14">0</bool>
-    <int name="scenes14">0</int>
+    <int name="scenes14">2</int>
     <bool name="pinned14">0</bool>
     <string name="module15">EngineLight</string>
     <string name="method15">EnglineLightBtn</string>
@@ -98,7 +98,7 @@
     <string name="module20">Chatterer</string>
     <string name="method20">UIToggle</string>
     <bool name="hashNeeded20">0</bool>
-    <int name="scenes20">4</int>
+    <int name="scenes20">0</int>
     <bool name="pinned20">0</bool>
     <string name="module21">TacStickyControls_NS</string>
     <string name="method21">tacStikyControlsButton</string>
@@ -135,5 +135,10 @@
     <bool name="hashNeeded27">0</bool>
     <int name="scenes27">24</int>
     <bool name="pinned27">0</bool>
-    <int name="count">27</int>
+    <string name="module28">TrackingStationFolders</string>
+    <string name="method28">&lt;OnGUIApplicationLauncherReady&gt;b__13_0</string>
+    <bool name="hashNeeded28">0</bool>
+    <int name="scenes28">32</int>
+    <bool name="pinned28">0</bool>
+    <int name="count">28</int>
 </config>
